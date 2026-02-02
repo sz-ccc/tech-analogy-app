@@ -15,10 +15,37 @@ app.use(express.json());
 app.use(express.static('.'));
 
 const DATA_FILE = './my_terms.json';
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
+const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1WVWzz7CT_o2GA9bAlPkVf0sS--l4iHioYCZySs3O0-U/export?format=csv&gid=0';
 
 async function getTerms() {
+    try {
+        // First, try to fetch fresh data from Google Sheets
+        const response = await fetch(SHEET_CSV_URL);
+        const csvText = await response.text();
+        const lines = csvText.split('\n');
+        const sheetTerms = [];
+        const regex = /(".*?"|[^,]+)(?=\s*,|\s*$)/g;
+
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+            const matches = line.match(regex) || [];
+            const row = matches.map(m => m.replace(/^"|"$/g, '').trim());
+            if (row.length >= 4) {
+                sheetTerms.push({
+                    category: row[0],
+                    term: row[1],
+                    explanation: row[2],
+                    analogy: row[3]
+                });
+            }
+        }
+        
+        if (sheetTerms.length > 0) return sheetTerms;
+    } catch (e) {
+        console.error('Cloud storage fetch failed, falling back to local JSON:', e);
+    }
+
     try {
         const data = await fs.readFile(DATA_FILE, 'utf-8');
         return JSON.parse(data);
@@ -30,6 +57,9 @@ async function getTerms() {
 async function saveTerms(terms) {
     await fs.writeFile(DATA_FILE, JSON.stringify(terms, null, 2));
 }
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
 
 app.post('/api/search', async (req, res) => {
     const { query } = req.body;

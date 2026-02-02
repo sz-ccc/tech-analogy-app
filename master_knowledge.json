@@ -1,0 +1,224 @@
+[
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Server (long-lived)",
+    "explanation": "A machine that runs continuously and keeps memory/connections alive.",
+    "analogy": "A full-time chef who stays on duty all day and remembers ongoing orders."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Server (short-lived, jobs, cron jobs, one-off job)",
+    "explanation": "A machine that spins up briefly to handle a task, then shuts down.",
+    "analogy": "A temp cook hired for the dinner rush."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Long-Running Process",
+    "explanation": "A compute task or service that stays active over time, maintaining memory and state. Common in AI agents, workflows, or streaming tasks.",
+    "analogy": "Like a chef who keeps cooking throughout the day while remembering all past orders."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Vertical Scaling",
+    "explanation": "Making a single server stronger by adding CPU/memory",
+    "analogy": "Expanding your food truck into a full restaurant kitchen."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Horizontal Scaling",
+    "explanation": "Adding more servers to share work.",
+    "analogy": "Hiring more food trucks instead of just upgrading one."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Autoscaling",
+    "explanation": "Automatically adding /removing servers based on demand.",
+    "analogy": "Like a thermostat that adjusts heating automatically to maintain comfort."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "High Availability",
+    "explanation": "Designing systems to tolerate failures with backups",
+    "analogy": "Having backup power generators during an outage."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Bare Metal",
+    "explanation": "A raw, physical server with no virtualization.",
+    "analogy": "Owning your own dedicated stove and oven."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "VM (Virtual Machine)",
+    "explanation": "A virtual “pretend computer” that runs inside a physical one.",
+    "analogy": "Renting a private kitchen in a shared commercial building."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Node (cluster node)",
+    "explanation": "A single machine (physical or virtual) that runs workloads in a cluster.",
+    "analogy": "One kitchen location in your restaurant chain."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Container",
+    "explanation": "A lightweight package with an app and everything it needs to run.",
+    "analogy": "A meal kit box with pre-measured ingredients ready for any chef."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Docker",
+    "explanation": "A brand/tool that standardizes how containers are built and run.",
+    "analogy": "The company that invented the meal kit packaging system."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Kubernetes (k8s)",
+    "explanation": "Open-source system for orchestrating containers across machines.",
+    "analogy": "The head waiter coordinating meal kits between chefs and kitchens."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "EKS (Elastic Kubernetes Service)",
+    "explanation": "AWS’s managed Kubernetes service.",
+    "analogy": "Outsourcing the head waiter role to AWS."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Dedicated Cluster (single-tenant)",
+    "explanation": "An isolated set of machines reserved for one customer.",
+    "analogy": "A private restaurant venue that only your team can use."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Serverless (Function as a Service)",
+    "explanation": "A cloud compute model where developers write single-purpose functions that auto-scale and run in response to events—without managing servers.",
+    "analogy": "Like a pop-up food truck that appears when someone places an order, cooks just that meal, and disappears. No reservation, no memory, no cleanup."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "Distributed System",
+    "explanation": "A group of computers working together as one.",
+    "analogy": "A restaurant chain with many branches covering for each other."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "Edge Computing",
+    "explanation": "Running services close to users for speed.",
+    "analogy": "Opening mini-restaurants in every neighborhood instead of one downtown."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "Centralized Cloud",
+    "explanation": "Running everything in a few big data centers.",
+    "analogy": "One giant food hall that everyone must travel to."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "CDN (Content Delivery Network)",
+    "explanation": "A network of edge servers that cache content.",
+    "analogy": "Pre-stocked fast-food kiosks handing out burgers instantly."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "VPC (Virtual Private Cloud)",
+    "explanation": "A logically isolated network inside the cloud.",
+    "analogy": "Renting your own private dining room with custom locks and seating."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "PrivateLink (AWS)",
+    "explanation": "A way to connect securely to third-party services without public internet.",
+    "analogy": "A secret underground tunnel connecting your restaurant directly to a supplier’s warehouse."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "Multi-Region",
+    "explanation": "Running in multiple geographic regions for latency and resilience.",
+    "analogy": "Flagship restaurants in several cities so locals are always close."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "Multi-Cloud",
+    "explanation": "Using more than one cloud provider strategically.",
+    "analogy": "Leasing kitchens in different commercial buildings to avoid single-landlord risk."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "Load Balancer",
+    "explanation": "Routes incoming requests across healthy servers.",
+    "analogy": "A front-of-house host sending diners to the next available table."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "WebSockets (real-time connections)",
+    "explanation": "Persistent two-way connections between client and server.",
+    "analogy": "An open intercom between the table and the kitchen for live back-and-forth."
+  },
+  {
+    "category": "Networking & Architecture (Where & How Everything Connects)",
+    "term": "Stateful vs Stateless",
+    "explanation": "Stateful apps remember context; stateless apps don’t.",
+    "analogy": "A waiter who remembers your favorites vs. a cashier who treats each visit as brand new."
+  },
+  {
+    "category": "Data & Storage (Recipes, Orders, and Supplies)",
+    "term": "Postgres (SQL DB)",
+    "explanation": "A relational database for structured data in tables/rows.",
+    "analogy": "A giant Excel-like recipe binder."
+  },
+  {
+    "category": "Data & Storage (Recipes, Orders, and Supplies)",
+    "term": "Redis",
+    "explanation": "An in-memory key-value store for ultra-fast lookups.",
+    "analogy": "Sticky notes on the chef’s counter for quick reminders."
+  },
+  {
+    "category": "Data & Storage (Recipes, Orders, and Supplies)",
+    "term": "S3 / Object Storage",
+    "explanation": "A service for storing files like images, backups, or logs.",
+    "analogy": "A giant warehouse storing boxes of supplies."
+  },
+  {
+    "category": "Data & Storage (Recipes, Orders, and Supplies)",
+    "term": "Vector Database (AI context)",
+    "explanation": "Stores vectors/embeddings for semantic search/RAG.",
+    "analogy": "A flavor index that groups similar tastes so chefs can find “things like this.”"
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "Generative AI",
+    "explanation": "Models that produce new content (text, code, images).",
+    "analogy": "A creative sous-chef that can draft recipes on request."
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "LLM (Large Language Model)",
+    "explanation": "A foundation model trained on huge text datasets to generate human-like language.",
+    "analogy": "A highly trained sommelier who can mimic your speech and offer the perfect wine recommendation."
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "RAG (Retrieval-Augmented Generation)",
+    "explanation": "AI that consults a knowledge base during generation.",
+    "analogy": "A chef who checks the recipe library mid-cook to incorporate the latest notes."
+  },
+  {
+    "category": "Ecosystem Players",
+    "term": "Hyperscalers",
+    "explanation": "Global cloud giants (AWS, GCP, Azure).",
+    "analogy": "Costco or Walmart—you can buy everything, but it can be overwhelming."
+  },
+  {
+    "category": "Ecosystem Players",
+    "term": "AWS (Amazon Web Services)",
+    "explanation": "The largest hyperscaler cloud, offering nearly every service imaginable.",
+    "analogy": "A massive department store with every kitchen tool but confusing aisles."
+  },
+  {
+    "category": "Ecosystem Players",
+    "term": "GitHub Repo (Repository)",
+    "explanation": "A project folder with version history for code.",
+    "analogy": "A recipe binder where every change is tracked, and multiple chefs collaborate."
+  }
+]

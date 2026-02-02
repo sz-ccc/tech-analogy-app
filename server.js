@@ -112,6 +112,18 @@ app.post('/api/search', async (req, res) => {
         terms.push(newEntry);
         await saveTerms(terms);
 
+        // 4. Update Cloud Storage (Google Sheets) automatically
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyC0qO_M_Yk0vG0l_33Y8e0-l_94f4q-8L3Y_Z-E-0/exec';
+        try {
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                body: JSON.stringify(terms),
+                headers: { 'Content-Type': 'application/json' }
+            }).catch(e => console.error('Cloud sync background error:', e));
+        } catch (e) {
+            console.error('Cloud sync attempt failed:', e);
+        }
+
         res.json({ source: 'ai', ...newEntry });
     } catch (error) {
         console.error('Gemini Error:', error);

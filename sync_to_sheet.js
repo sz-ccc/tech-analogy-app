@@ -2,7 +2,7 @@ import fs from 'fs';
 
 async function syncToSheet() {
     const DATA_FILE = './my_terms.json';
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyC0qO_M_Yk0vG0l_33Y8e0-l_94f4q-8L3Y_Z-E-0/exec'; // Placeholder for Deployment URL
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzllfwPAbicgXA1KnpL0bho4nM6joRoigVEZBEkC0tluuYpEjOBK5YkuBuRW-mWAHE8/exec';
 
     try {
         const data = fs.readFileSync(DATA_FILE, 'utf-8');

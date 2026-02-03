@@ -39,7 +39,7 @@
 
         @keyframes scrollUp {
             from { transform: translateY(0); }
-            to { transform: translateY(-33.33%); }
+            to { transform: translateY(-33.333%); }
         }
 
         body {
@@ -98,8 +98,6 @@
             position: relative;
             flex-shrink: 0;
             margin-bottom: 50px;
-            cursor: ns-resize;
-            user-select: none;
         }
 
         @media (min-width: 1200px) {
@@ -192,9 +190,9 @@
 
         .library-title { text-align: center; font-family: 'Geist Mono', monospace; color: var(--text-secondary); font-size: 0.7rem; margin: 0; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; opacity: 0.5; }
 
-        .marquee-viewport { height: 100%; position: relative; }
+        /* The marquee styling - using raw scroll animation */
+        .marquee-viewport { height: 100%; overflow: hidden; position: relative; }
         .marquee-content { display: flex; flex-direction: column; animation: scrollUp 120s linear infinite; }
-        .marquee-content.is-dragging { animation: none !important; }
         .marquee-content:hover { animation-play-state: paused; }
 
         .term-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; padding: 15px 0; }
@@ -208,13 +206,12 @@
             font-size: 0.75rem;
             color: var(--text-secondary);
             cursor: pointer;
-            transition: transform 0.3s var(--ease-out-expo), border-color 0.3s var(--ease-out-expo), background 0.3s var(--ease-out-expo);
+            transition: all 0.3s var(--ease-out-expo);
             font-family: 'Geist Mono', monospace;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 50px;
-            user-select: none;
         }
 
         .term-pill:hover {
@@ -259,7 +256,7 @@
         </div>
     </div>
 
-    <div class="scroll-area" id="scrollViewport">
+    <div class="scroll-area">
         <div class="container marquee-viewport">
             <div id="pantryWrapper" class="marquee-content">
                 <div id="pantryGrid1" class="term-grid"></div>
@@ -272,8 +269,6 @@
 
 <script>
     let masterList = [];
-    let isDragging = false;
-    let startY, currentTranslate = 0, prevTranslate = 0;
 
     async function updatePantry() {
         try {
@@ -292,49 +287,11 @@
             document.getElementById('pantryGrid3').innerHTML = gridContent;
 
             const wrapper = document.getElementById('pantryWrapper');
-            const duration = Math.max(60, masterList.length * 4);
+            const duration = Math.max(40, masterList.length * 1.5);
             wrapper.style.animationDuration = `${duration}s`;
+
         } catch (e) { console.error(e); }
     }
-
-    // Advanced Scroll/Drag Implementation
-    const viewport = document.getElementById('scrollViewport');
-    const wrapper = document.getElementById('pantryWrapper');
-
-    viewport.addEventListener('mousedown', (e) => {
-        isDragging = true;
-        startY = e.pageY;
-        wrapper.classList.add('is-active');
-        wrapper.style.animationPlayState = 'paused';
-    });
-
-    window.addEventListener('mousemove', (e) => {
-        if (!isDragging) return;
-        const y = e.pageY;
-        const walk = (y - startY) * 1.5;
-        currentTranslate = prevTranslate + walk;
-        wrapper.style.transform = `translateY(${currentTranslate}px)`;
-    });
-
-    window.addEventListener('mouseup', () => {
-        isDragging = false;
-        prevTranslate = currentTranslate;
-        wrapper.style.animationPlayState = 'running';
-    });
-
-    // Touch support for laptop trackpads
-    viewport.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        currentTranslate -= e.deltaY;
-        
-        // Loop logic for manual scroll
-        const height = wrapper.offsetHeight / 3;
-        if (Math.abs(currentTranslate) >= height) currentTranslate = 0;
-        if (currentTranslate > 0) currentTranslate = -height;
-
-        wrapper.style.transform = `translateY(${currentTranslate}px)`;
-        prevTranslate = currentTranslate;
-    }, { passive: false });
 
     async function handleRoulette() {
         if (masterList.length === 0) return;
@@ -346,13 +303,17 @@
     async function handleSearch(overrideQuery = null, forceNew = false) {
         const query = (overrideQuery || document.getElementById('searchInput').value).trim();
         if (!query) return;
+
         const resultsDiv = document.getElementById('results');
         const directMatch = masterList.find(t => t.term.toLowerCase() === query.toLowerCase());
+        
         if (directMatch && !forceNew) {
             displayResult(directMatch, 'database');
             return;
         }
+
         resultsDiv.innerHTML = '<div class="loading">Consulting the AI Oracle...</div>';
+
         try {
             const response = await fetch('/api/search', {
                 method: 'POST',
@@ -360,10 +321,12 @@
                 body: JSON.stringify({ query, forceNew })
             });
             const data = await response.json();
+            
             if (response.status === 400) {
                 resultsDiv.innerHTML = `<div class="status-msg">🔮 ${data.error}</div>`;
                 return;
             }
+            
             if (data.error) throw new Error(data.error);
             displayResult(data, data.source);
             updatePantry();
@@ -375,10 +338,14 @@
     function displayResult(data, source) {
         const resultsDiv = document.getElementById('results');
         const isAI = source !== 'database';
+        
         document.body.classList.add('has-result');
+
         resultsDiv.innerHTML = `
             <div class="card is-active" id="resultCard" style="opacity: 0; transform: translateY(30px);">
-                <span class="source-badge">${isAI ? '✨ AI GENERATED' : '📚 CACHED DATA'}</span>
+                <span class="source-badge">
+                    ${isAI ? '✨ AI GENERATED' : '📚 CACHED DATA'}
+                </span>
                 <div id="resCategory" style="color: var(--text-secondary); font-size: 0.75rem; font-family: 'Geist Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; opacity: 0;">${data.category}</div>
                 <h2 id="resName" class="term-name" style="opacity: 0;">${data.term}</h2>
                 <p id="resExp" class="explanation-text" style="opacity: 0;">${data.explanation}</p>
@@ -391,12 +358,14 @@
                 </div>
             </div>
         `;
+
         const card = document.getElementById('resultCard');
         setTimeout(() => { 
             card.style.transition = "all 0.8s var(--ease-out-expo), border-color 1.5s ease";
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
         }, 50);
+
         const elements = ['resCategory', 'resName', 'resExp', 'resAnalogy', 'resFeedback'];
         elements.forEach((id, index) => {
             setTimeout(() => {

@@ -62,8 +62,8 @@
         }
 
         .top-section {
-            min-height: 35vh;
-            padding: 40px 20px 30px 20px;
+            min-height: 30vh;
+            padding: 30px 20px 20px 20px;
             z-index: 100;
             flex-shrink: 0;
             display: flex;
@@ -74,7 +74,7 @@
 
         .library-header-static {
             background-color: var(--bg);
-            padding: 30px 20px 10px 20px;
+            padding: 20px 20px 5px 20px;
             flex-shrink: 0;
             z-index: 90;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
@@ -90,40 +90,40 @@
 
         @media (min-width: 1200px) {
             body { height: 100vh; overflow: hidden; }
-            .top-section { height: 50vh; min-height: 400px; }
+            .top-section { height: 45vh; min-height: 350px; }
         }
 
         @media (max-width: 1199px) {
-            .top-section { min-height: auto; height: auto; padding-top: 40px; padding-bottom: 40px; }
-            .scroll-area { height: 400px; flex: none; }
+            .top-section { min-height: auto; height: auto; padding-top: 30px; padding-bottom: 30px; }
+            .scroll-area { height: 350px; flex: none; }
             body { overflow: auto; height: auto; }
-            #results { margin-bottom: 20px; }
+            #results { margin-bottom: 15px; }
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .h1-sub { font-size: 0.9rem; margin-top: 8px; }
-            .term-name { font-size: 1.8rem; }
-            .explanation-text { font-size: 1rem; }
-            .card { padding: 25px; }
-            .top-section { padding: 30px 20px; }
-            .search-box { margin-top: 20px; }
+            h1 { font-size: 1.8rem; }
+            .h1-sub { font-size: 0.8rem; margin-top: 6px; }
+            .term-name { font-size: 1.6rem; }
+            .explanation-text { font-size: 0.95rem; }
+            .card { padding: 20px; }
+            .top-section { padding: 20px 15px; }
+            .search-box { margin-top: 15px; }
         }
 
-        .container { max-width: 900px; margin: 0 auto; width: 100%; }
+        .container { max-width: 850px; margin: 0 auto; width: 100%; }
 
-        header { text-align: center; margin-bottom: 20px; }
+        header { text-align: center; margin-bottom: 15px; }
 
         header::before {
             content: '👨‍🍳';
-            font-size: 2.5rem;
+            font-size: 2rem;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             color: #fff;
             margin: 0;
             line-height: 1;
@@ -131,36 +131,36 @@
         }
 
         .h1-sub {
-            font-size: 1rem;
+            font-size: 0.85rem;
             display: block;
             color: var(--text-secondary);
             font-family: 'Geist Mono', monospace;
             font-weight: 400;
-            margin-top: 10px;
+            margin-top: 8px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
         }
 
         .subtitle {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            margin-top: 12px;
+            margin-top: 10px;
             font-weight: 400;
             opacity: 0.7;
-            max-width: 450px;
+            max-width: 400px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .search-box {
             display: flex;
-            gap: 12px;
-            margin: 20px auto 15px auto;
-            max-width: 500px;
+            gap: 10px;
+            margin: 15px auto 12px auto;
+            max-width: 450px;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-default);
-            border-radius: 14px;
-            padding: 6px;
+            border-radius: 12px;
+            padding: 5px;
             backdrop-filter: blur(40px);
             transition: all 0.4s var(--ease-out-expo);
         }
@@ -172,24 +172,24 @@
 
         input {
             flex: 1;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border: none;
-            font-size: 1rem;
+            font-size: 0.95rem;
             outline: none;
             background: transparent;
             color: white;
             font-family: 'Inter', sans-serif;
         }
 
-        .btn-group { display: flex; gap: 12px; justify-content: center; margin-bottom: 25px; }
+        .btn-group { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
 
         button {
-            padding: 10px 28px;
-            border-radius: 10px;
+            padding: 8px 22px;
+            border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s var(--ease-out-expo);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.06em;
             font-family: 'Inter', sans-serif;
@@ -222,12 +222,12 @@
         .card {
             position: relative;
             background: var(--surface);
-            padding: 35px;
-            border-radius: 20px;
+            padding: 25px 30px;
+            border-radius: 16px;
             border: 1px solid var(--border-default);
             box-shadow: 0 30px 80px rgba(0,0,0,0.7);
             width: 100%;
-            max-width: 800px;
+            max-width: 750px;
             max-height: 100%;
             overflow-y: auto;
             animation: slideIn 0.8s var(--ease-out-expo);
@@ -241,23 +241,23 @@
         }
 
         .analogy-container {
-            margin-top: 30px;
+            margin-top: 20px;
             background: rgba(255, 255, 255, 0.02);
-            padding: 25px;
-            border-radius: 14px;
+            padding: 15px 20px;
+            border-radius: 12px;
             border: 1px solid var(--border-default);
             position: relative;
         }
 
         .analogy-label {
             position: absolute;
-            top: -12px;
+            top: -10px;
             left: 20px;
             background: #fff;
             color: #000;
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-weight: 800;
-            padding: 3px 10px;
+            padding: 2px 8px;
             border-radius: 4px;
             text-transform: uppercase;
             font-family: 'Geist Mono', monospace;
@@ -266,8 +266,8 @@
         .analogy-text {
             font-style: italic;
             color: #fff;
-            font-size: 1.05rem;
-            line-height: 1.6;
+            font-size: 0.95rem;
+            line-height: 1.5;
             opacity: 0.95;
         }
 
@@ -277,27 +277,27 @@
         }
 
         .source-badge {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             font-family: 'Geist Mono', monospace;
             text-transform: uppercase;
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 100px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             display: inline-block;
             border: 1px solid var(--border-default);
             background: rgba(255, 255, 255, 0.02);
             color: var(--text-secondary);
         }
 
-        .term-name { font-size: 2.2rem; font-family: 'Playfair Display', serif; margin: 0 0 12px 0; color: white; line-height: 1; letter-spacing: -0.04em; }
+        .term-name { font-size: 1.8rem; font-family: 'Playfair Display', serif; margin: 0 0 8px 0; color: white; line-height: 1; letter-spacing: -0.04em; }
 
-        .explanation-text { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.6; max-width: 680px; }
+        .explanation-text { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; max-width: 600px; }
 
         .library-title {
             text-align: center;
             font-family: 'Geist Mono', monospace;
             color: var(--text-secondary);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             margin: 0;
             letter-spacing: 0.3em;
             text-transform: uppercase;
@@ -324,18 +324,18 @@
 
         .term-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 14px;
-            padding: 20px 0;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            padding: 15px 0;
         }
 
         .term-pill {
-            padding: 15px;
+            padding: 10px;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-default);
-            border-radius: 12px;
+            border-radius: 10px;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: var(--text-secondary);
             cursor: pointer;
             transition: all 0.3s var(--ease-out-expo);
@@ -344,28 +344,29 @@
 
         .term-pill:hover {
             color: #fff;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
             background: rgba(255, 255, 255, 0.05);
             border-color: var(--neon-blue);
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+            box-shadow: 0 0 12px rgba(0, 210, 255, 0.2);
         }
 
         @keyframes slideIn {
-            from { opacity: 0; transform: translateY(30px); filter: blur(10px); }
+            from { opacity: 0; transform: translateY(20px); filter: blur(10px); }
             to { opacity: 1; transform: translateY(0); filter: blur(0); }
         }
 
-        .loading { text-align: center; padding: 30px; color: #fff; font-family: 'Geist Mono', monospace; font-size: 0.9rem; letter-spacing: 0.25em; text-transform: uppercase; animation: pulseGlow 2.5s infinite; }
+        .loading { text-align: center; padding: 25px; color: #fff; font-family: 'Geist Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; animation: pulseGlow 2.5s infinite; }
 
         .status-msg {
-            padding: 60px;
-            border-radius: 24px;
+            padding: 40px;
+            border-radius: 20px;
             background: rgba(255, 255, 255, 0.01);
             border: 1.5px solid var(--border-default);
             text-align: center;
             color: var(--text-secondary);
             font-style: italic;
+            font-size: 0.95rem;
             animation: fadeIn 1.5s var(--ease-out-expo), borderFlow 8s infinite linear;
         }
     </style>

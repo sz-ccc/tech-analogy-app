@@ -155,7 +155,7 @@
         .search-box {
             display: flex;
             gap: 10px;
-            margin: 15px auto 12px auto;
+            margin: 20px auto 12px auto;
             max-width: 450px;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-default);
@@ -308,8 +308,13 @@
         /* Floating Wall Animation */
         .marquee-viewport {
             height: 100%;
-            overflow: hidden;
+            overflow-y: auto;
             position: relative;
+            scrollbar-width: none; /* Firefox */
+        }
+
+        .marquee-viewport::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
         }
 
         .marquee-content {
@@ -340,6 +345,10 @@
             cursor: pointer;
             transition: all 0.3s var(--ease-out-expo);
             font-family: 'Geist Mono', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 50px;
         }
 
         .term-pill:hover {
@@ -347,8 +356,8 @@
             transform: translateY(-4px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.5);
             background: rgba(255, 255, 255, 0.05);
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 12px rgba(0, 210, 255, 0.2);
+            border-color: var(--neon-green);
+            box-shadow: 0 0 12px rgba(56, 176, 0, 0.2);
         }
 
         @keyframes slideIn {

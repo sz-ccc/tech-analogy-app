@@ -14,13 +14,13 @@
             --border-default: rgba(255, 255, 255, 0.08);
             --text-primary: #ffffff;
             --text-secondary: #a1a1aa;
-            
+
             --neon-green: #38b000;
             --neon-purple: #9d4edd;
             --neon-pink: #ff006e;
             --neon-orange: #ff9f1c;
             --neon-blue: #00d2ff;
-            
+
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -139,7 +139,7 @@
             animation: borderFlow 8s infinite linear;
         }
 
-        .search-box:focus-within { 
+        .search-box:focus-within {
             box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
             background: rgba(255, 255, 255, 0.05);
         }
@@ -377,7 +377,7 @@
 
         const resultsDiv = document.getElementById('results');
         const directMatch = masterList.find(t => t.term.toLowerCase() === query.toLowerCase());
-        
+
         if (directMatch && !forceNew) {
             displayResult(directMatch, 'database');
             return;
@@ -392,12 +392,12 @@
                 body: JSON.stringify({ query, forceNew })
             });
             const data = await response.json();
-            
+
             if (response.status === 400) {
                 resultsDiv.innerHTML = `<div class="status-msg">🔮 ${data.error}</div>`;
                 return;
             }
-            
+
             if (data.error) throw new Error(data.error);
             await updatePantry();
             displayResult(data, data.source);
@@ -409,7 +409,7 @@
     function displayResult(data, source) {
         const resultsDiv = document.getElementById('results');
         const isAI = source !== 'database';
-        
+
         document.body.classList.add('has-result');
 
         resultsDiv.innerHTML = `
@@ -451,478 +451,7 @@
                 if (term) handleSearch(term);
             }
         });
-        setTimeout(() => { 
-            card.style.transition = "all 0.8s var(--ease-out-expo), border-color 1.5s ease";
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-        }, 50);
-
-        const elements = ['resCategory', 'resName', 'resExp', 'resAnalogy', 'resFeedback'];
-        elements.forEach((id, index) => {
-            setTimeout(() => {
-                const el = document.getElementById(id);
-                if (el) {
-                    el.style.transition = "all 0.6s var(--ease-out-expo)";
-                    el.style.opacity = "1";
-                    el.style.transform = "translateY(0)";
-                }
-            }, 400 + (index * 150));
-        });
-    }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Tech Glossary | Side of Kitchen Wisdom</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #030303;
-            --surface: rgba(10, 10, 10, 0.95);
-            --border-default: rgba(255, 255, 255, 0.08);
-            --text-primary: #ffffff;
-            --text-secondary: #a1a1aa;
-            
-            --neon-green: #38b000;
-            --neon-purple: #9d4edd;
-            --neon-pink: #ff006e;
-            --neon-orange: #ff9f1c;
-            --neon-blue: #00d2ff;
-            
-            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); filter: blur(4px); }
-            to { opacity: 1; transform: translateY(0); filter: blur(0); }
-        }
-
-        @keyframes borderFlow {
-            0% { border-color: var(--neon-green); }
-            25% { border-color: var(--neon-purple); }
-            50% { border-color: var(--neon-pink); }
-            75% { border-color: var(--neon-orange); }
-            100% { border-color: var(--neon-green); }
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            background-image:
-                radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
-                linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
-            background-size: 100% 100%, 50px 50px, 50px 50px;
-            color: var(--text-primary);
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            animation: fadeIn 1s var(--ease-out-expo);
-            -webkit-font-smoothing: antialiased;
-            overflow: hidden;
-        }
-
-        .page-wrapper {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-height: 0;
-            flex: 1;
-        }
-
-        .top-section {
-            width: 100%;
-            padding: 40px 20px 30px 20px;
-            z-index: 100;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: 1px solid var(--border-default);
-            background: var(--bg);
-            flex-shrink: 0;
-        }
-
-        .library-header-static {
-            flex-shrink: 0;
-            background-color: var(--bg);
-            padding: 12px 20px 8px;
-            z-index: 90;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .scroll-area {
-            flex: 1;
-            min-height: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.2);
-            overflow-y: auto;
-            overflow-x: hidden;
-            -webkit-overflow-scrolling: touch;
-            position: relative;
-        }
-
-        @media (min-width: 1200px) {
-            body { height: 100vh; overflow: hidden; }
-            .page-wrapper { height: 100%; min-height: 0; display: flex; flex-direction: column; }
-            .top-section {
-                flex-shrink: 0;
-                height: 35vh;
-                min-height: 280px;
-                transition: height 0.8s var(--ease-out-expo);
-            }
-            body.has-result .top-section {
-                height: 60vh;
-            }
-            .library-header-static { flex-shrink: 0; }
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .top-section { padding: 30px 15px; }
-        }
-
-        .container { max-width: 850px; margin: 0 auto; width: 100%; }
-
-        header { text-align: center; margin-bottom: 15px; }
-        header::before { content: '👨‍🍳'; font-size: 2rem; display: block; margin-bottom: 8px; }
-
-        h1 { font-family: 'Playfair Display', serif; font-size: 2.2rem; color: #fff; margin: 0; line-height: 1; letter-spacing: -0.05em; }
-        .h1-sub { font-size: 0.85rem; display: block; color: var(--text-secondary); font-family: 'Geist Mono', monospace; font-weight: 400; margin-top: 8px; letter-spacing: 0.12em; text-transform: uppercase; }
-        .subtitle { font-size: 0.9rem; color: var(--text-secondary); margin-top: 10px; font-weight: 400; opacity: 0.7; max-width: 400px; margin-left: auto; margin-right: auto; text-align: center; }
-
-        .search-box {
-            display: flex;
-            gap: 10px;
-            margin: 15px auto 12px auto;
-            width: 100%;
-            max-width: 450px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1.5px solid var(--border-default);
-            border-radius: 12px;
-            padding: 5px;
-            backdrop-filter: blur(40px);
-            transition: all 0.4s var(--ease-out-expo);
-            animation: borderFlow 8s infinite linear;
-        }
-
-        .search-box:focus-within { 
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        input { flex: 1; padding: 8px 12px; border: none; font-size: 0.95rem; outline: none; background: transparent; color: white; font-family: 'Inter', sans-serif; }
-
-        .btn-group { display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; }
-
-        button { padding: 8px 22px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s var(--ease-out-expo); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; font-family: 'Inter', sans-serif; }
-        button.main-btn { background: #fff; color: #000; border: 1px solid #fff; }
-        button.roulette-btn { background: transparent; color: #fff; border: 1px solid var(--border-default); }
-        button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
-
-        #results { width: 100%; display: flex; align-items: flex-start; justify-content: center; overflow: visible; margin-bottom: 10px; }
-
-        .card {
-            position: relative;
-            background: var(--surface);
-            padding: 25px 30px;
-            border-radius: 16px;
-            border: 1.5px solid var(--border-default);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.7);
-            width: 100%;
-            max-width: 750px;
-            animation: slideIn 0.8s var(--ease-out-expo);
-            backdrop-filter: blur(20px);
-            transition: border-color 1.5s ease;
-        }
-
-        .card.is-active { animation: slideIn 0.8s var(--ease-out-expo), borderFlow 8s infinite linear; }
-
-        .analogy-container { margin-top: 20px; background: rgba(255, 255, 255, 0.02); padding: 15px 20px; border-radius: 12px; border: 1px solid var(--border-default); position: relative; }
-        .analogy-label { position: absolute; top: -10px; left: 20px; background: #fff; color: #000; font-size: 0.55rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; font-family: 'Geist Mono', monospace; }
-        .analogy-text { font-style: italic; color: #fff; font-size: 0.95rem; line-height: 1.5; opacity: 0.95; }
-        .analogy-text::before { content: '🍱 '; font-style: normal; }
-
-        .feedback-section { margin-top: 25px; padding-top: 20px; border-top: 1px dashed var(--border-default); display: flex; justify-content: center; }
-        .alt-meaning-btn { background: transparent; border: 1px solid var(--border-default); color: var(--text-secondary); font-family: 'Geist Mono', monospace; font-size: 0.65rem; padding: 6px 15px; border-radius: 6px; cursor: pointer; transition: all 0.3s var(--ease-out-expo); text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px; }
-        .alt-meaning-btn:hover { border-color: var(--neon-pink); color: var(--neon-pink); background: rgba(236, 72, 153, 0.05); }
-
-        .source-badge { font-size: 0.55rem; font-family: 'Geist Mono', monospace; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 12px; display: inline-block; border: 1px solid var(--border-default); background: rgba(255, 255, 255, 0.02); color: var(--text-secondary); }
-
-        .term-name { font-size: 1.8rem; font-family: 'Playfair Display', serif; margin: 0 0 8px 0; color: white; line-height: 1; letter-spacing: -0.04em; }
-        .explanation-text { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; max-width: 600px; }
-
-        .term-link {
-            color: var(--neon-green);
-            text-decoration: underline;
-            text-underline-offset: 2px;
-            cursor: pointer;
-            border-radius: 2px;
-            padding: 0 1px;
-            transition: color 0.2s var(--ease-out-expo), background 0.2s;
-        }
-        .term-link:hover {
-            color: #fff;
-            background: rgba(56, 176, 0, 0.15);
-        }
-        .term-link:focus {
-            outline: none;
-            background: rgba(56, 176, 0, 0.2);
-        }
-        .term-link--search {
-            text-decoration-style: dotted;
-            color: var(--text-secondary);
-        }
-        .term-link--search:hover {
-            color: var(--neon-green);
-            text-decoration-style: solid;
-        }
-
-        .library-title { text-align: center; font-family: 'Geist Mono', monospace; color: var(--text-secondary); font-size: 0.7rem; margin: 0; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; opacity: 0.5; }
-
-        .term-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; padding: 15px 20px 40px; }
-
-        .term-pill {
-            padding: 15px 10px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-default);
-            border-radius: 10px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.3s var(--ease-out-expo);
-            font-family: 'Geist Mono', monospace;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 50px;
-        }
-
-        .term-pill:hover {
-            color: #fff;
-            transform: translateY(-4px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--neon-green);
-            box-shadow: 0 0 12px rgba(56, 176, 0, 0.2);
-        }
-
-        @keyframes slideIn { from { opacity: 0; transform: translateY(20px); filter: blur(10px); } to { opacity: 1; transform: translateY(0); filter: blur(0); } }
-        .loading { text-align: center; padding: 25px; color: #fff; font-family: 'Geist Mono', monospace; font-size: 0.8rem; letter-spacing: 0.25em; text-transform: uppercase; animation: pulseGlow 2.5s infinite; }
-        .status-msg { padding: 40px; border-radius: 20px; background: rgba(255, 255, 255, 0.01); border: 1.5px solid var(--border-default); text-align: center; color: var(--text-secondary); font-style: italic; font-size: 0.95rem; animation: fadeIn 1.5s var(--ease-out-expo), borderFlow 8s infinite linear; }
-    </style>
-</head>
-<body>
-
-<div class="page-wrapper">
-    <div class="top-section">
-        <div class="container">
-            <header>
-                <h1>Tech Glossary <span class="h1-sub">with Kitchen analogy</span></h1>
-                <p class="subtitle">An autonomous library that learns as you search</p>
-            </header>
-
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search for any tech term...">
-            </div>
-
-            <div class="btn-group">
-                <button class="main-btn" onclick="handleSearch()">Search</button>
-                <button class="roulette-btn" onclick="handleRoulette()">🎲 Kitchen Roulette</button>
-            </div>
-
-            <div id="results"></div>
-        </div>
-    </div>
-
-    <div class="library-header-static">
-        <div class="container">
-            <h3 class="library-title">Master Library</h3>
-        </div>
-    </div>
-
-    <div class="scroll-area">
-        <div class="container">
-            <div id="pantryGrid" class="term-grid"></div>
-        </div>
-    </div>
-</div>
-
-<script>
-    let masterList = [];
-
-    function escHtml(s) {
-        return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    }
-
-    function escapeRegex(s) {
-        return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-
-    const STOPWORDS = new Set(['a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'shall', 'can', 'need', 'dare', 'to', 'of', 'in', 'on', 'for', 'with', 'at', 'by', 'from', 'as', 'into', 'through', 'during', 'before', 'after', 'and', 'but', 'or', 'nor', 'so', 'yet', 'if', 'then', 'than', 'that', 'this', 'it', 'its']);
-
-    function linkifyTerms(text, termsList) {
-        const escaped = text ? escHtml(text) : '';
-        if (!escaped) return '';
-
-        let out = escaped;
-        const placeholders = [];
-
-        if (termsList && termsList.length > 0) {
-            const terms = termsList
-                .map((t) => (typeof t === 'string' ? t : (t && t.term) ? t.term : ''))
-                .filter(Boolean)
-                .sort((a, b) => b.length - a.length);
-            for (const term of terms) {
-                const escapedTerm = escHtml(term);
-                if (!escapedTerm) continue;
-                const re = new RegExp(escapeRegex(escapedTerm), 'gi');
-                out = out.replace(re, (match) => {
-                    const id = placeholders.length;
-                    placeholders.push({ display: match, term: term });
-                    return '\uFFFC' + id + '\uFFFC';
-                });
-            }
-            out = out.replace(/\uFFFC(\d+)\uFFFC/g, (_, id) => {
-                const p = placeholders[parseInt(id, 10)];
-                if (!p) return '';
-                return '<span class="term-link" data-term="' + escHtml(p.term) + '" role="button" tabindex="0">' + p.display + '</span>';
-            });
-        }
-
-        const spanRegex = /<span class="term-link" [^>]*>[\s\S]*?<\/span>/gi;
-        const parts = out.split(spanRegex);
-        const spans = out.match(spanRegex) || [];
-        const rebuilt = [];
-        for (let i = 0; i < parts.length; i++) {
-            rebuilt.push(wrapSearchableWords(parts[i]));
-            if (i < spans.length) rebuilt.push(spans[i]);
-        }
-        return rebuilt.join('');
-    }
-
-    function wrapSearchableWords(segment) {
-        if (!segment) return segment;
-        return segment.replace(/\b(\w+)\b/g, (match) => {
-            if (STOPWORDS.has(match.toLowerCase())) return match;
-            if (match.length < 2) return match;
-            return '<span class="term-link term-link--search" data-term="' + escHtml(match) + '" role="button" tabindex="0">' + match + '</span>';
-        });
-    }
-
-    async function updatePantry() {
-        try {
-            const termsResp = await fetch('/my_terms.json');
-            const data = await termsResp.json();
-            masterList = Array.isArray(data) ? data : Object.values(data);
-
-            const grid = document.getElementById('pantryGrid');
-            grid.innerHTML = masterList.map((t) => {
-                const safe = escHtml(t.term);
-                return `<div class="term-pill" data-term="${safe}" title="${safe}">${safe}</div>`;
-            }).join('');
-
-            grid.querySelectorAll('.term-pill').forEach((pill) => {
-                pill.addEventListener('click', () => {
-                    const term = pill.getAttribute('data-term');
-                    if (term) handleSearch(term);
-                });
-            });
-        } catch (e) { console.error(e); }
-    }
-
-    async function handleRoulette() {
-        if (masterList.length === 0) return;
-        const randomTerm = masterList[Math.floor(Math.random() * masterList.length)].term;
-        document.getElementById('searchInput').value = randomTerm;
-        handleSearch(randomTerm);
-    }
-
-    async function handleSearch(overrideQuery = null, forceNew = false) {
-        const query = (overrideQuery || document.getElementById('searchInput').value).trim();
-        if (!query) return;
-
-        const resultsDiv = document.getElementById('results');
-        const directMatch = masterList.find(t => t.term.toLowerCase() === query.toLowerCase());
-        
-        if (directMatch && !forceNew) {
-            displayResult(directMatch, 'database');
-            return;
-        }
-
-        resultsDiv.innerHTML = '<div class="loading">Consulting the AI Oracle...</div>';
-
-        try {
-            const response = await fetch('/api/search', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query, forceNew })
-            });
-            const data = await response.json();
-            
-            if (response.status === 400) {
-                resultsDiv.innerHTML = `<div class="status-msg">🔮 ${data.error}</div>`;
-                return;
-            }
-            
-            if (data.error) throw new Error(data.error);
-            await updatePantry();
-            displayResult(data, data.source);
-        } catch (error) {
-            resultsDiv.innerHTML = `<div class="status-msg">📡 Sensei says: ${error.message}</div>`;
-        }
-    }
-
-    function displayResult(data, source) {
-        const resultsDiv = document.getElementById('results');
-        const isAI = source !== 'database';
-        
-        document.body.classList.add('has-result');
-
-        resultsDiv.innerHTML = `
-            <div class="card is-active" id="resultCard" style="opacity: 0; transform: translateY(30px);">
-                <span class="source-badge">
-                    ${isAI ? '✨ AI GENERATED' : '📚 CACHED DATA'}
-                </span>
-                <div id="resCategory" style="color: var(--text-secondary); font-size: 0.75rem; font-family: 'Geist Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; opacity: 0;">${escHtml(data.category)}</div>
-                <h2 id="resName" class="term-name" style="opacity: 0;">${escHtml(data.term)}</h2>
-                <p id="resExp" class="explanation-text" style="opacity: 0;">${linkifyTerms(data.explanation, masterList)}</p>
-                <div id="resAnalogy" class="analogy-container" style="opacity: 0;">
-                    <div class="analogy-label">Kitchen Wisdom</div>
-                    <div class="analogy-text">"${linkifyTerms(data.analogy, masterList)}"</div>
-                </div>
-                <div class="feedback-section" style="opacity: 0;" id="resFeedback">
-                    <button type="button" class="alt-meaning-btn">🔄 Not what you meant? Try a different recipe</button>
-                </div>
-            </div>
-        `;
-
-        const altBtn = resultsDiv.querySelector('.alt-meaning-btn');
-        if (altBtn) altBtn.addEventListener('click', () => handleSearch(data.term, true));
-
-        const card = document.getElementById('resultCard');
-        card.addEventListener('click', (e) => {
-            const link = e.target.closest('.term-link');
-            if (link) {
-                e.preventDefault();
-                const term = link.getAttribute('data-term');
-                if (term) handleSearch(term);
-            }
-        });
-        card.addEventListener('keydown', (e) => {
-            if (e.key !== 'Enter' && e.key !== ' ') return;
-            const link = e.target.closest('.term-link');
-            if (link) {
-                e.preventDefault();
-                const term = link.getAttribute('data-term');
-                if (term) handleSearch(term);
-            }
-        });
-        setTimeout(() => { 
+        setTimeout(() => {
             card.style.transition = "all 0.8s var(--ease-out-expo), border-color 1.5s ease";
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
@@ -945,22 +474,9 @@
     window.addEventListener('DOMContentLoaded', async () => {
         await updatePantry();
         console.log('Pantry loaded:', masterList.length, 'terms');
-        
-        document.getElementById('searchInput').onkeyup = (e) => { 
-            if (e.key === 'Enter') handleSearch(); 
-        };
-    });
-</script>
 
-</body>
-</html>
-    // Initialize on page load
-    window.addEventListener('DOMContentLoaded', async () => {
-        await updatePantry();
-        console.log('Pantry loaded:', masterList.length, 'terms');
-        
-        document.getElementById('searchInput').onkeyup = (e) => { 
-            if (e.key === 'Enter') handleSearch(); 
+        document.getElementById('searchInput').onkeyup = (e) => {
+            if (e.key === 'Enter') handleSearch();
         };
     });
 </script>

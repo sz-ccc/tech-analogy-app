@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Tech Glossary | Side of Kitchen Wisdom</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,15 +37,10 @@
             100% { border-color: var(--neon-green); }
         }
 
-        @keyframes scrollUp {
-            from { transform: translateY(0); }
-            to { transform: translateY(-33.333%); }
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg);
-            background-image: 
+            background-image:
                 radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
                 linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
@@ -53,20 +48,20 @@
             color: var(--text-primary);
             margin: 0;
             padding: 0;
-            min-height: 100vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             animation: fadeIn 1s var(--ease-out-expo);
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
+            overflow: hidden;
         }
 
         .page-wrapper {
             display: flex;
             flex-direction: column;
             width: 100%;
-            height: auto;
-            min-height: 100vh;
+            min-height: 0;
+            flex: 1;
         }
 
         .top-section {
@@ -82,40 +77,42 @@
         }
 
         .library-header-static {
+            flex-shrink: 0;
             background-color: var(--bg);
-            padding: 25px 20px 10px 20px;
+            padding: 12px 20px 8px;
             z-index: 90;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-            position: sticky;
-            top: 0;
         }
 
         .scroll-area {
+            flex: 1;
+            min-height: 0;
             width: 100%;
-            height: 500px;
             background-color: rgba(0, 0, 0, 0.2);
-            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
             position: relative;
-            flex-shrink: 0;
-            margin-bottom: 50px;
         }
 
         @media (min-width: 1200px) {
             body { height: 100vh; overflow: hidden; }
-            .top-section { 
-                height: 35vh; 
-                min-height: 280px; 
+            .page-wrapper { height: 100%; min-height: 0; display: flex; flex-direction: column; }
+            .top-section {
+                flex-shrink: 0;
+                height: 35vh;
+                min-height: 280px;
                 transition: height 0.8s var(--ease-out-expo);
             }
             body.has-result .top-section {
                 height: 60vh;
             }
+            .library-header-static { flex-shrink: 0; }
         }
 
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
             .top-section { padding: 30px 15px; }
-            .scroll-area { height: 350px; }
         }
 
         .container { max-width: 850px; margin: 0 auto; width: 100%; }
@@ -190,12 +187,7 @@
 
         .library-title { text-align: center; font-family: 'Geist Mono', monospace; color: var(--text-secondary); font-size: 0.7rem; margin: 0; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; opacity: 0.5; }
 
-        /* The marquee styling - using raw scroll animation */
-        .marquee-viewport { height: 100%; overflow: hidden; position: relative; }
-        .marquee-content { display: flex; flex-direction: column; animation: scrollUp 120s linear infinite; }
-        .marquee-content:hover { animation-play-state: paused; }
-
-        .term-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; padding: 15px 0; }
+        .term-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; padding: 15px 20px 40px; }
 
         .term-pill {
             padding: 15px 10px;
@@ -257,12 +249,8 @@
     </div>
 
     <div class="scroll-area">
-        <div class="container marquee-viewport">
-            <div id="pantryWrapper" class="marquee-content">
-                <div id="pantryGrid1" class="term-grid"></div>
-                <div id="pantryGrid2" class="term-grid"></div>
-                <div id="pantryGrid3" class="term-grid"></div>
-            </div>
+        <div class="container">
+            <div id="pantryGrid" class="term-grid"></div>
         </div>
     </div>
 </div>
@@ -270,26 +258,28 @@
 <script>
     let masterList = [];
 
+    function escHtml(s) {
+        return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
     async function updatePantry() {
         try {
             const termsResp = await fetch('/my_terms.json');
             const data = await termsResp.json();
             masterList = Array.isArray(data) ? data : Object.values(data);
-            
-            const gridContent = masterList.map((t) => `
-                <div class="term-pill" onclick="handleSearch('${t.term}')">
-                    ${t.term}
-                </div>
-            `).join('');
 
-            document.getElementById('pantryGrid1').innerHTML = gridContent;
-            document.getElementById('pantryGrid2').innerHTML = gridContent;
-            document.getElementById('pantryGrid3').innerHTML = gridContent;
+            const grid = document.getElementById('pantryGrid');
+            grid.innerHTML = masterList.map((t) => {
+                const safe = escHtml(t.term);
+                return `<div class="term-pill" data-term="${safe}" title="${safe}">${safe}</div>`;
+            }).join('');
 
-            const wrapper = document.getElementById('pantryWrapper');
-            const duration = Math.max(40, masterList.length * 1.5);
-            wrapper.style.animationDuration = `${duration}s`;
-
+            grid.querySelectorAll('.term-pill').forEach((pill) => {
+                pill.addEventListener('click', () => {
+                    const term = pill.getAttribute('data-term');
+                    if (term) handleSearch(term);
+                });
+            });
         } catch (e) { console.error(e); }
     }
 
@@ -346,18 +336,21 @@
                 <span class="source-badge">
                     ${isAI ? '✨ AI GENERATED' : '📚 CACHED DATA'}
                 </span>
-                <div id="resCategory" style="color: var(--text-secondary); font-size: 0.75rem; font-family: 'Geist Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; opacity: 0;">${data.category}</div>
-                <h2 id="resName" class="term-name" style="opacity: 0;">${data.term}</h2>
-                <p id="resExp" class="explanation-text" style="opacity: 0;">${data.explanation}</p>
+                <div id="resCategory" style="color: var(--text-secondary); font-size: 0.75rem; font-family: 'Geist Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; opacity: 0;">${escHtml(data.category)}</div>
+                <h2 id="resName" class="term-name" style="opacity: 0;">${escHtml(data.term)}</h2>
+                <p id="resExp" class="explanation-text" style="opacity: 0;">${escHtml(data.explanation)}</p>
                 <div id="resAnalogy" class="analogy-container" style="opacity: 0;">
                     <div class="analogy-label">Kitchen Wisdom</div>
                     <div class="analogy-text">“${data.analogy}”</div>
                 </div>
                 <div class="feedback-section" style="opacity: 0;" id="resFeedback">
-                    <button class="alt-meaning-btn" onclick="handleSearch('${data.term}', true)">🔄 Not what you meant? Try a different recipe</button>
+                    <button type="button" class="alt-meaning-btn">🔄 Not what you meant? Try a different recipe</button>
                 </div>
             </div>
         `;
+
+        const altBtn = resultsDiv.querySelector('.alt-meaning-btn');
+        if (altBtn) altBtn.addEventListener('click', () => handleSearch(data.term, true));
 
         const card = document.getElementById('resultCard');
         setTimeout(() => { 

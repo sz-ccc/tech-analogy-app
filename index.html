@@ -102,10 +102,23 @@
         }
 
         @media (max-width: 1199px) {
-            .top-section { min-height: auto; height: auto; padding-top: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-default); }
-            .scroll-area { height: 350px; flex: none; }
+            .top-section { 
+                min-height: auto; 
+                height: auto; 
+                padding: 30px 20px; 
+                border-bottom: 1px solid var(--border-default); 
+                transition: none; /* Instant shift on laptop */
+            }
+            .scroll-area { 
+                height: 250px; /* Force library to be much smaller on laptop */
+                flex: none; 
+            }
+            body.has-result .scroll-area {
+                height: 180px; /* Shrink library even more when a card is shown */
+            }
             body { overflow: auto; height: auto; }
             #results { margin-bottom: 15px; }
+            .card { padding: 20px; }
         }
 
         @media (max-width: 768px) {

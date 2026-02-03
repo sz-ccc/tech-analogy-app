@@ -69,7 +69,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            border-bottom: 1px solid var(--border-default);
+            transition: height 0.8s var(--ease-out-expo);
         }
 
         .library-header-static {
@@ -90,11 +90,19 @@
 
         @media (min-width: 1200px) {
             body { height: 100vh; overflow: hidden; }
-            .top-section { height: 45vh; min-height: 350px; }
+            .top-section { 
+                height: 35vh; 
+                min-height: 280px; 
+                border-bottom: 1px solid var(--border-default);
+            }
+            /* When a result is shown, top section grows, pushing library down */
+            body.has-result .top-section {
+                height: 60vh;
+            }
         }
 
         @media (max-width: 1199px) {
-            .top-section { min-height: auto; height: auto; padding-top: 30px; padding-bottom: 30px; }
+            .top-section { min-height: auto; height: auto; padding-top: 30px; padding-bottom: 30px; border-bottom: 1px solid var(--border-default); }
             .scroll-area { height: 350px; flex: none; }
             body { overflow: auto; height: auto; }
             #results { margin-bottom: 15px; }
@@ -155,7 +163,7 @@
         .search-box {
             display: flex;
             gap: 10px;
-            margin: 20px auto 12px auto;
+            margin: 15px auto 12px auto;
             max-width: 450px;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-default);
@@ -335,7 +343,7 @@
         }
 
         .term-pill {
-            padding: 10px;
+            padding: 15px 10px;
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid var(--border-default);
             border-radius: 10px;
@@ -439,7 +447,6 @@
             document.getElementById('pantryGrid1').innerHTML = gridContent;
             document.getElementById('pantryGrid2').innerHTML = gridContent;
 
-            // Adjust animation duration based on content length
             const wrapper = document.getElementById('pantryWrapper');
             const duration = Math.max(20, masterList.length * 1.5);
             wrapper.style.animationDuration = `${duration}s`;
@@ -493,6 +500,9 @@
         const resultsDiv = document.getElementById('results');
         const isAI = source !== 'database';
         
+        // Add class to body to trigger layout shift
+        document.body.classList.add('has-result');
+
         resultsDiv.innerHTML = `
             <div class="card is-active" id="resultCard" style="opacity: 0; transform: translateY(30px);">
                 <span class="source-badge">

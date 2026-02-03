@@ -1,243 +1,9 @@
 [
   {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "AI Gateway",
-    "explanation": "A service that acts as a secure proxy to route, scale, and monitor requests to various AI models and providers.",
-    "analogy": "A master maître d’ who stands at the front desk, takes all AI requests, and directs them to the exact right chef in the kitchen."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Agentic Workloads",
-    "explanation": "Autonomous AI agents designed to perform long-running tasks, make decisions, and maintain context without constant human intervention.",
-    "analogy": "A tireless, robotic line cook that keeps working and preparing dishes between orders without needing to be told what to do next."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Egress Filtering",
-    "explanation": "A security practice that monitors and restricts data from leaving a private network to prevent unauthorized data exfiltration.",
-    "analogy": "A bouncer standing at the back door checking every outgoing food order to make sure no secret family recipes are being stolen."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "File System (Cloud/Network)",
-    "explanation": "A method and data structure that an operating system uses to keep track of files on a disk or across a network.",
-    "analogy": "A massive, perfectly labeled kitchen pantry where any chef can quickly find the exact ingredients they need for their station."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Fine-Tuning",
-    "explanation": "The process of taking a pre-trained AI model and training it further on a specific, smaller dataset to improve its performance for a particular task.",
-    "analogy": "Taking a general, world-class recipe and slightly adjusting it with your grandmother's secret spice mix to suit your local customers' taste."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "GPU-Backed Inference",
-    "explanation": "Using specialized Graphics Processing Units to accelerate the mathematical computations required to run AI models in real-time.",
-    "analogy": "Installing industrial, high-BTU burners in the kitchen to sear dishes ten times faster than a standard home stove."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Generative AI",
-    "explanation": "A type of artificial intelligence capable of generating new content, such as text, code, or images, based on patterns it has learned.",
-    "analogy": "A highly creative sous-chef who can draft entire new recipe books on request based on just a few simple ingredient suggestions."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Inference",
-    "explanation": "The process of using a trained AI model to make predictions or generate outputs based on new, incoming data.",
-    "analogy": "The moment the chef actually begins cooking the dish exactly as the master recipe book describes it."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "LLM (Large Language Model)",
-    "explanation": "A powerful AI model trained on massive text datasets to understand, generate, and process human-like language.",
-    "analogy": "A world-class sommelier who has read every book on wine ever written and can mimic any speech style to offer the perfect recommendation."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "MCP Server",
-    "explanation": "A specialized server architecture (Multi-Compute Process) that manages and isolates multiple independent compute tasks simultaneously.",
-    "analogy": "A large kitchen with multiple independent cooking stations that are all managed and kept in sync by a single head chef."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Model Training",
-    "explanation": "The initial process of teaching an AI model by feeding it massive amounts of data so it can learn to recognize patterns and make predictions.",
-    "analogy": "Teaching a brand new apprentice chef how to cook by showing them ten thousand different meals and explaining exactly how each one was prepared."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Prompt Engineering",
-    "explanation": "The process of carefully crafting and refining inputs (prompts) to guide an AI model toward generating the most accurate or creative output.",
-    "analogy": "Giving your sous-chef incredibly precise instructions: 'Make the sauce spicy enough to tingle, but not so salty that it masks the fish.'"
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "RAG (Retrieval-Augmented Generation)",
-    "explanation": "A technique for giving an LLM access to external knowledge bases to improve the accuracy and relevance of its generated responses.",
-    "analogy": "A chef who pauses to check a massive library of cookbooks mid-cook to ensure they are using the absolute latest ingredient notes."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Sandboxed Execution",
-    "explanation": "Running untrusted or experimental code in an isolated environment to prevent it from affecting the rest of the system or data.",
-    "analogy": "A sealed, fireproof test kitchen where chefs can experiment with explosive recipes without any risk of burning down the main restaurant."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Temporal",
-    "explanation": "An open-source platform that enables the creation of durable, stateful, and fault-tolerant workflows in distributed systems.",
-    "analogy": "A head chef with a perfect, photographic memory who knows exactly where every single dish left off, even if the entire kitchen loses power."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Token",
-    "explanation": "The basic unit of text (a word or part of a word) used by AI models to process and generate language.",
-    "analogy": "The individual syllables or bites of a meal: the model 'chews' through these small pieces to understand the entire dish."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Tokenization",
-    "explanation": "The process of breaking down a large string of text into smaller, digestible units (tokens) that an AI model can process mathematically.",
-    "analogy": "Slicing and dicing every single raw ingredient into uniform, bite-sized pieces before the cooking process can begin."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Vibe Coding",
-    "explanation": "A modern, iterative approach to software development that focuses on quick exploration, intuition, and high-level AI-assisted building.",
-    "analogy": "Freestyling in the kitchen: throwing various ingredients together through a smart oven until the dish finally 'vibes' and tastes exactly right."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "Workflow Engine",
-    "explanation": "A software system that manages and coordinates complex, multi-step processes across different services or departments.",
-    "analogy": "A professional kitchen manager who hands out recipes, checks progress at every single step, and ensures every meal is completed in order."
-  },
-  {
-    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
-    "term": "n8n",
-    "explanation": "A powerful, low-code workflow automation tool that allows users to connect various applications and services through a visual interface.",
-    "analogy": "A busy line cook who connects different parts of the kitchen using pre-written sticky notes instead of yelling across the room."
-  },
-  {
-    "category": "AI Development Workflow",
-    "term": "Cursor",
-    "explanation": "An AI-powered code editor built on Visual Studio Code, focusing on code generation, debugging, and chat integration to enhance developer speed.",
-    "analogy": "The experienced executive chef who stands next to a new cook, offering instant verbal instructions, automatically correcting knife skills, and suggesting the next step before a mistake is made."
-  },
-  {
-    "category": "AI Inference Hardware",
-    "term": "Groq",
-    "explanation": "A company specializing in low-latency, high-speed inference for LLMs using custom Language Processing Unit (LPU) hardware.",
-    "analogy": "The custom-built, ultra-high-speed induction range and blast chiller combination that cooks and cools dishes instantly, ensuring minimal wait time for any order."
-  },
-  {
-    "category": "AI Infrastructure & Execution",
-    "term": "ClawdBot",
-    "explanation": "A proprietary, highly advanced conversational AI model specializing in complex reasoning, task completion, and robust safety protocols.",
-    "analogy": "The Michelin-starred, secret celebrity chef hired specifically for their high-level, creative cooking skills and meticulous attention to food safety."
-  },
-  {
-    "category": "AI Infrastructure & Execution",
-    "term": "OpenClaw",
-    "explanation": "An open-source framework or standardized interface designed for building and managing large language model (LLM) applications across different environments.",
-    "analogy": "The standardized stainless-steel kitchen work surface where all the prep, assembly, and initial plating happen according to protocol."
-  },
-  {
-    "category": "AI Orchestration",
-    "term": "LangChain",
-    "explanation": "A framework for developing applications powered by language models by chaining together components like data sources, models, and tools.",
-    "analogy": "The Head Chef's detailed clipboard, containing the step-by-step assembly order and instructions for complex, multi-stage dishes (e.g., 'Sear the protein, prep the sauce, then plate the garnish')."
-  },
-  {
-    "category": "AI Orchestration",
-    "term": "LangGraph",
-    "explanation": "An extension of LangChain focused on creating stateful, cyclical, multi-actor LLM applications using directed acyclic graphs (DAGs) for reliable execution.",
-    "analogy": "The complex flow chart pinned in the kitchen showing how ingredients move between specific stations (prep, cooking, expediting) and defining feedback loops for dish adjustments."
-  },
-  {
-    "category": "AI Research & Development",
-    "term": "Anthropic",
-    "explanation": "An AI safety and research company that develops robust, trustworthy, and generalized AI systems, focusing on aligning models with human values.",
-    "analogy": "The highly respected Culinary Institute that trains elite chefs, focusing heavily on ethical sourcing, sanitation standards, and setting best practices for the industry."
-  },
-  {
-    "category": "AI Research & Development",
-    "term": "DeepSeek",
-    "explanation": "A large language model developer known for its efficient mixture-of-experts (MoE) models and strong coding and reasoning capabilities.",
-    "analogy": "A specialized food import/export firm that sources unique and high-quality ingredients specifically from East Asia, known for its rapid delivery methods."
-  },
-  {
-    "category": "AI Research & Development",
-    "term": "Mistral AI",
-    "explanation": "A leading European company focused on developing efficient, high-performance, and open-source large language models.",
-    "analogy": "A specialized farm cooperative that provides only the highest quality, locally sourced ingredients to the top exclusive restaurants in the region."
-  },
-  {
-    "category": "AI Search & Data Retrieval",
-    "term": "Firecrawl",
-    "explanation": "A tool that crawls websites, extracts clean, structured content, and converts it into formats suitable for LLMs and RAG systems.",
-    "analogy": "The dedicated prep staff member who goes to local markets, cleanly peels, chops, sanitizes, and precisely measures all raw ingredients before they enter the main kitchen prep area."
-  },
-  {
-    "category": "AI Search & Data Retrieval",
-    "term": "Tavily",
-    "explanation": "A specialized search API designed to retrieve concise, relevant, and high-quality information optimized for RAG pipelines and LLM consumption.",
-    "analogy": "The expert sous chef who is assigned to quickly find the single most relevant piece of information (e.g., 'what is the safe internal temperature for poultry?') from the massive cookbook library."
-  },
-  {
-    "category": "AI/ML Model Repository",
-    "term": "Hugging Face",
-    "explanation": "A hub for open-source AI models, datasets, and tools, fostering collaborative machine learning development and sharing.",
-    "analogy": "The massive, shared library of cookbooks and ingredient pairing manuals, containing thousands of ready-to-use recipes submitted by chefs and food scientists globally."
-  },
-  {
-    "category": "Access & Security (Keys, Badges, and Safes)",
-    "term": "Environment Variable",
-    "explanation": "A dynamic value that can affect the way running processes will behave on a computer, often used to store configuration data.",
-    "analogy": "A chalkboard in the kitchen that says today's special is 'Vegan Burger'—the chefs follow the board without needing to rewrite the recipe book."
-  },
-  {
-    "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
-    "term": "Background Workers",
-    "explanation": "Long-running software processes that handle tasks outside of the main request-response cycle (e.g., sending emails, processing images).",
-    "analogy": "A kitchen assistant who stays in the back chopping vegetables for tomorrow while the main chefs are busy serving today's customers."
-  },
-  {
-    "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
-    "term": "Cron Jobs",
-    "explanation": "Automated tasks that are scheduled to run at specific, recurring intervals (e.g., every morning at 2 AM).",
-    "analogy": "Setting a kitchen alarm to go off every morning at 4 AM to start baking the fresh bread for the day."
-  },
-  {
-    "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
-    "term": "Feature Flags",
-    "explanation": "A technique that allows developers to turn specific software features on or off for certain users without deploying new code.",
-    "analogy": "Switching a new special on the menu board on and off for just a few tables to test if people actually want to buy it."
-  },
-  {
-    "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
-    "term": "Kafka",
-    "explanation": "A high-throughput, distributed event streaming platform used for building real-time data pipelines and streaming applications.",
-    "analogy": "A fast-moving conveyor belt in a massive kitchen where waiters place orders and chefs grab them whenever they are ready."
-  },
-  {
-    "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
-    "term": "Managed Queues (SQS, Kafka)",
-    "explanation": "Buffer systems that temporarily store messages or tasks, allowing different parts of a system to process work at their own pace.",
-    "analogy": "A stack of order tickets piling up on the kitchen counter so the cooks can work through them steadily without chaos."
-  },
-  {
-    "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
-    "term": "One-Off Jobs",
-    "explanation": "Individual tasks that are executed once and then exit the system, often used for data migrations or maintenance.",
-    "analogy": "Calling a plumber to come in and fix a single leaking sink—they do the task once and then leave the restaurant."
-  },
-  {
-    "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
-    "term": "Preview Environment",
-    "explanation": "A temporary, isolated cloud environment created for each pull request to test changes in a live-like setting before merging.",
-    "analogy": "Setting up a small rehearsal kitchen for one single night to let the chefs practice a new dish before the grand tasting event."
+    "category": "DevOps: GitOps (Pull)",
+    "term": "ArgoCD",
+    "explanation": "A declarative, GitOps continuous delivery tool for Kubernetes, managing application state by continuously syncing with a Git repository.",
+    "analogy": "The automated kitchen manager who constantly checks the master recipe blueprint (Git repo) and immediately pulls ingredients and adjusts the live production line (the kitchen) to match any approved changes."
   },
   {
     "category": "Async Processing & Jobs (Behind-the-Scenes Work)",
@@ -246,10 +12,64 @@
     "analogy": "Instantly pulling a bad dish off the menu and going back to the old, reliable recipe in the middle of a dinner service."
   },
   {
+    "category": "DevOps: Orchestration",
+    "term": "Kubernetes",
+    "explanation": "An open-source system for automating the deployment, scaling, and management of containerized applications.",
+    "analogy": "The highly sophisticated Head Waiter/Maitre D' who manages the entire dining floor, ensuring tables are seated, orders are distributed, and backups are ready if a server calls in sick."
+  },
+  {
+    "category": "Tooling and Packaging",
+    "term": "Yarn",
+    "explanation": "A fast, reliable, and secure dependency management tool that introduced features like lockfiles and standardized installation flows for JavaScript packages.",
+    "analogy": "The Delivery Dispatcher who verifies and organizes incoming ingredient shipments (dependencies) efficiently, ensuring the ingredient list (lockfile) matches the contents exactly before stocking."
+  },
+  {
+    "category": "DevOps: Packaging/Templating",
+    "term": "Helm",
+    "explanation": "The package manager for Kubernetes, allowing users to define, install, and upgrade complex applications using charts (pre-configured templates).",
+    "analogy": "The standardized instruction manual/recipe book ('chart') for setting up an entire, complex meal service, making it easy to replicate the entire restaurant setup quickly."
+  },
+  {
     "category": "Authentication & Identity",
     "term": "Auth0",
     "explanation": "A comprehensive identity management platform providing secure authentication and authorization across multiple applications and identity providers.",
     "analogy": "The highly secure, audited electronic reservation system that validates a diner's identity and permissions across all branches of the restaurant chain, ensuring global access control."
+  },
+  {
+    "category": "DevOps: Runtime",
+    "term": "Docker",
+    "explanation": "A platform that packages applications and their dependencies into lightweight, portable containers (images) for consistent execution.",
+    "analogy": "Standardized, reusable storage containers (Tupperware) used to perfectly package specific prepared meal components for transport or staging, ensuring consistency regardless of the location they are opened."
+  },
+  {
+    "category": "Tooling and Packaging",
+    "term": "pnpm",
+    "explanation": "A package manager that uses a content-addressable store to save disk space and speed up installations by hard-linking dependencies into projects.",
+    "analogy": "The Organized Pantry Stocker who uses a universal storage vault (content-addressable store) and only creates shortcuts (hard links) in individual recipe boxes, saving immense shelf space and fetching time."
+  },
+  {
+    "category": "DevOps: Runtime Alternative",
+    "term": "Podman",
+    "explanation": "A daemonless container engine for developing, managing, and running OCI containers, often seen as a secure, rootless alternative to Docker.",
+    "analogy": "The highly secure, personalized chef's tool chest that holds their specialized equipment, managed only by the chef (rootless) without needing a central shop foreman (daemon) to operate."
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "AI Gateway",
+    "explanation": "A service that acts as a secure proxy to route, scale, and monitor requests to various AI models and providers.",
+    "analogy": "A master maître d’ who stands at the front desk, takes all AI requests, and directs them to the exact right chef in the kitchen."
+  },
+  {
+    "category": "Edge Compute",
+    "term": "Cloudflare Workers",
+    "explanation": "A serverless execution environment that allows developers to run code at the edge of the network (closest to the user) for high performance and low latency.",
+    "analogy": "The highly efficient Waiter running code directly on their P.O.S. tablet at the table. They handle simple tasks (like minor menu adjustments or input validation) instantly without needing to talk back to the main kitchen server."
+  },
+  {
+    "category": "Email & Communication",
+    "term": "Resend",
+    "explanation": "A developer-friendly API for sending transactional and marketing emails with high deliverability and simplified integration.",
+    "analogy": "The dedicated communication service responsible only for sending professional, reliable electronic messages like reservation confirmations, payment receipts, and delivery tracking updates."
   },
   {
     "category": "Authentication & Identity",
@@ -258,202 +78,10 @@
     "analogy": "The friendly but robust Maitre d' at the front door who checks reservations, verifies diner identity, and manages which customers are allowed access to the private dining rooms."
   },
   {
-    "category": "Backend Services",
-    "term": "Supabase",
-    "explanation": "An open-source suite of backend services providing database, authentication, real-time subscriptions, and storage, often used as a Firebase alternative.",
-    "analogy": "The entire back-office operations suite: the computer handling reservations, the digital inventory spreadsheet, the security system, and the customer data storage, all managed by one team."
-  },
-  {
-    "category": "Backend as a Service (BaaS)",
-    "term": "Appwrite",
-    "explanation": "A self-hosted, open-source backend server that provides developers with a set of core APIs for authentication, databases, file storage, and functions.",
-    "analogy": "The Dedicated Food Truck. It handles all its own operations, security, ingredient storage, and cooking processes using entirely self-managed, open-source equipment, allowing the owner complete control."
-  },
-  {
-    "category": "Backend as a Service (BaaS)",
-    "term": "Firebase",
-    "explanation": "Google's comprehensive platform providing backend services like databases, authentication, hosting, and analytics, primarily used for building mobile and web applications quickly.",
-    "analogy": "The All-Inclusive Corporate Caterer. They handle everything—setting up the tables, supplying the secure ingredients (Auth), managing the inventory (DB), and even hosting the event (Hosting)—all under one major contract."
-  },
-  {
-    "category": "Backend as a Service (BaaS)",
-    "term": "Pocketbase",
-    "explanation": "An open-source, single-file Go backend that combines a SQLite database, API, and admin dashboard into one small, portable package.",
-    "analogy": "The Highly Portable Catering Box. It contains the database (ingredients), the serving tools (API), and the order management system (Admin UI) all tightly packed into a single, easy-to-deploy unit."
-  },
-  {
-    "category": "Build Automation",
-    "term": "Earthly",
-    "explanation": "A build automation tool that allows developers to define builds using Earthfile (a declarative language) ensuring reproducibility regardless of the environment.",
-    "analogy": "The standard set of 'Kitchen Blueprints' ensuring every build (mixing, baking, frying) is executed in a clean, reproducible containerized environment, guaranteeing consistent quality control across all locations."
-  },
-  {
-    "category": "CI/CD",
-    "term": "CircleCI",
-    "explanation": "A continuous integration and continuous delivery platform that automates the software development process, focusing on speed and parallel execution.",
-    "analogy": "A highly optimized, parallelized prep station line. It can chop vegetables, mix dough, and marinate meat simultaneously and quickly verify ingredient quality before serving."
-  },
-  {
-    "category": "CI/CD",
-    "term": "Concourse",
-    "explanation": "An open-source CI/CD system designed for scaling, emphasizing resource isolation and declarative pipelines defined by configuration.",
-    "analogy": "The Industrial Kitchen Conveyor Belt system. Every task (testing, cooking, packaging) is defined as a separate, isolated step on the belt, ensuring strict separation and clear status visualization."
-  },
-  {
-    "category": "CI/CD",
-    "term": "TravisCI",
-    "explanation": "A hosted continuous integration service used to build and test software projects hosted primarily on GitHub.",
-    "analogy": "The veteran Quality Assurance Chef who strictly verifies recipes pulled directly from the GitHub Recipe Library before sending them to the main cooking line."
-  },
-  {
-    "category": "CI/CD (Automation Server)",
-    "term": "Jenkins",
-    "explanation": "An open-source automation server used to build, test, and deploy virtually any project, highly flexible but requiring self-management.",
-    "analogy": "The Customizable, General-Purpose Automated Assembly Line. It requires a dedicated maintenance staff (sysadmins) to set up, but can execute any complex custom preparation task imaginable."
-  },
-  {
-    "category": "CI/CD (Hybrid)",
-    "term": "Buildkite",
-    "explanation": "A CI/CD platform that manages the workflow control plane while allowing builds to run securely on the customer's own infrastructure (agents).",
-    "analogy": "The Central Dispatch System for Kitchen Tasks. It manages the queue centrally but tells remote, specialized cooking robots (agents) exactly what to make, utilizing their localized processing power."
-  },
-  {
-    "category": "CI/CD (Kubernetes)",
-    "term": "Tekton",
-    "explanation": "A powerful, flexible, cloud-native CI/CD framework for Kubernetes, allowing developers to build, test, and deploy across multiple cloud providers.",
-    "analogy": "The Kubernetes-native Orchestrator for the entire Kitchen Fleet. It manages specific, modular cooking steps (Tasks) and sequences them into full meal preparation workflows (Pipelines)."
-  },
-  {
-    "category": "CI/CD Tooling",
-    "term": "Dagger",
-    "explanation": "A portable CI/CD engine that executes pipelines defined as standard code, focusing on consistency across environments using containers.",
-    "analogy": "A highly specialized, portable Sous Chef (defined by code) that guarantees that a recipe tested in the small prep kitchen will taste *exactly* the same when executed on the main serving line or the delivery truck."
-  },
-  {
-    "category": "Cloud Services",
-    "term": "Upstash",
-    "explanation": "Serverless data infrastructure, primarily offering Redis (caching) and Kafka (real-time messaging) accessible via REST APIs for backend and serverless applications.",
-    "analogy": "The instantaneous, dedicated warming ovens and real-time notification boards. They store frequently ordered appetizers for instant retrieval (caching) and handle the instant communication of staff shift changes (real-time messaging)."
-  },
-  {
-    "category": "Cloud/Backend",
-    "term": "Event Bridge",
-    "explanation": "A serverless event bus service that ingests events from various sources and intelligently routes them to specific targets (like other functions or services) based on filtering rules and patterns.",
-    "analogy": "The central, computerized Kitchen Display System (KDS) that receives all waiter input and intelligently routes the 'Steak Order' ticket only to the Grill Station Chef, and the 'Dessert Order' only to the Pastry Chef, based on pre-set logic."
-  },
-  {
-    "category": "Cloud/DevOps",
-    "term": "Provisioned Concurrency",
-    "explanation": "A configuration that guarantees a specified number of function instances are always initialized and running, ready to execute requests instantly, thus eliminating cold starts entirely at a higher cost.",
-    "analogy": "Hiring several dedicated, salaried specialty chefs who are paid to stand at their stations, uniforms crisp, knives drawn, ready to cook immediately and indefinitely, even if no matching orders arrive for a few minutes."
-  },
-  {
-    "category": "Cloud/IaC",
-    "term": "Bicep",
-    "explanation": "A domain-specific language developed by Microsoft for declarative deployment of Azure resources, offering a more readable and concise syntax than raw ARM templates.",
-    "analogy": "The 'Concise Sous Chef' who takes the lengthy, complex recipe instructions from the main Azure recipe book (ARM) and rewrites them into simple, readable steps for the line cooks."
-  },
-  {
-    "category": "Cloud/IaC",
-    "term": "CDK",
-    "explanation": "Cloud Development Kit (CDK) frameworks allow cloud infrastructure definition using familiar object-oriented programming languages (e.g., TypeScript, Python), which then synthesize cloud provider templates.",
-    "analogy": "The 'Automated Recipe Generator' that takes a simple instruction in Python ('set up a three-course dinner service') and translates it into hundreds of specific, deployable configuration cards."
-  },
-  {
-    "category": "Cloud/IaC",
-    "term": "OpenTofu",
-    "explanation": "A community-driven fork of Terraform, maintaining compatibility while ensuring an open-source license and governed by the Linux Foundation.",
-    "analogy": "The 'Independent Architectural Firm' that uses the exact same industry standard blueprints and methodologies as the original firm but operates under an open, community-governed agreement."
-  },
-  {
-    "category": "Cloud/IaC",
-    "term": "Pulumi",
-    "explanation": "An Infrastructure as Code (IaC) tool that allows developers to define cloud infrastructure using general-purpose programming languages (e.g., Python, TypeScript).",
-    "analogy": "The 'Executive Chef/Architect' who uses standard, familiar programming languages (like Python or JavaScript) rather than specialized blueprint language to describe complex kitchen layouts and infrastructure setups."
-  },
-  {
-    "category": "Cloud/IaC",
-    "term": "Terraform",
-    "explanation": "An open-source tool that allows users to provision infrastructure across multiple cloud providers using a declarative configuration language (HCL).",
-    "analogy": "The primary 'Blueprints Architect' who describes the entire physical restaurant—the foundation, walls, and plumbing—before any physical construction begins."
-  },
-  {
-    "category": "Cloud/Networking",
-    "term": "Edge Functions",
-    "explanation": "Serverless functions deployed globally across a Content Delivery Network (CDN), executing close to the end user to reduce latency for tasks like authentication, routing, or content personalization.",
-    "analogy": "A highly trained Maitre d' stationed right at the restaurant entrance who immediately handles simple requests (checking reservations, seating known VIPs) without needing to consult the main Kitchen Manager (origin server) for every decision."
-  },
-  {
-    "category": "Cloud/Orchestration",
-    "term": "Crossplane",
-    "explanation": "An open-source Kubernetes add-on that extends the Kubernetes API to manage external infrastructure and services (like databases or load balancers) across multiple clouds.",
-    "analogy": "The 'Universal Reservation System' that allows the front desk (Kubernetes API) to manage not only internal seating (pods) but also external services like the outsourced valet parking and linen service, all through one control panel."
-  },
-  {
-    "category": "Continuous Delivery",
-    "term": "Harness",
-    "explanation": "A commercial software delivery platform designed to simplify complex deployments using AI/ML-driven features for governance and rollback.",
-    "analogy": "The AI-Powered Delivery Manager. It uses predictive analytics (ML/AI) to determine the safest time to launch a new dish and automatically triggers a recall (rollback) if diner complaints spike."
-  },
-  {
-    "category": "Continuous Delivery",
-    "term": "Spinnaker",
-    "explanation": "An open-source, multi-cloud continuous delivery platform designed for high velocity, providing robust deployment strategies (e.g., canary, blue/green).",
-    "analogy": "The Head of Global Distribution and Deployment. Its sole job is safely rolling out new menu items (software releases) to various regional franchises using phased, low-risk methods (Canary/Blue-Green testing)."
-  },
-  {
-    "category": "Data & Search Retrieval",
-    "term": "Pinecone",
-    "explanation": "A managed vector database optimized for high-speed similarity search, essential for Retrieval-Augmented Generation (RAG) architectures.",
-    "analogy": "The hyper-organized, searchable ingredient pantry where the chef can instantly find, for example, 'all spices that pair well with duck' based on flavor profile (vector embedding), not just their name."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "CloudSQL",
-    "explanation": "A fully managed relational database service provided by Google Cloud for running MySQL, PostgreSQL, and SQL Server.",
-    "analogy": "Hiring an external professional team to manage and organize your recipe binder for you, so you only have to focus on cooking."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "Database PITR (Point-in-Time Recovery)",
-    "explanation": "A feature that allows a database to be restored to a specific moment in time to recover from accidental deletions or errors.",
-    "analogy": "Rewinding the kitchen's security camera footage to exactly one minute before a chef accidentally spilled the soup."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "EFS / Network File Storage",
-    "explanation": "A shared file system that can be mounted simultaneously by multiple servers, allowing them to access the same files.",
-    "analogy": "A shared walk-in pantry that every chef in the kitchen can access and use at the exact same time."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "Elasticsearch",
-    "explanation": "A distributed, RESTful search and analytics engine designed for searching through massive amounts of text data and logs.",
-    "analogy": "A librarian maître d’ who can instantly find any customer's name or a specific ingredient from years of past reservation logs."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "Postgres (SQL DB)",
-    "explanation": "An advanced, open-source relational database that stores structured data in tables with predefined rows and columns.",
-    "analogy": "A massive, perfectly organized recipe binder where every ingredient and step has its exact place."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "Read Replicas",
-    "explanation": "Copies of a primary database used to offload read-only traffic and improve the performance of read-heavy applications.",
-    "analogy": "Making several photocopies of a secret recipe so many chefs can read it at once without crowding around the original book."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "Redis",
-    "explanation": "An in-memory data structure store used as a database, cache, and message broker for ultra-fast data retrieval.",
-    "analogy": "Brightly colored sticky notes placed right on the chef's counter for quick reminders of the most frequent orders."
-  },
-  {
-    "category": "Data & Storage (Recipes, Orders, and Supplies)",
-    "term": "S3 / Object Storage",
-    "explanation": "A cloud service for storing and retrieving any amount of data (images, backups, logs) in a flat, highly scalable structure.",
-    "analogy": "A giant, infinite warehouse used for storing thousands of boxes of supplies, kitchen tools, and old recipe records."
+    "category": "Frontend Frameworks",
+    "term": "Angular",
+    "explanation": "A comprehensive, opinionated framework maintained by Google, used for large-scale, complex applications, enforcing robust structural patterns (MVC/MVVM).",
+    "analogy": "The Corporate Kitchen Manager who dictates the entire Standard Operating Procedure (SOP), ensuring all staff and systems adhere to strict, formal, complex protocols."
   },
   {
     "category": "Data & Storage (Recipes, Orders, and Supplies)",
@@ -462,10 +90,52 @@
     "analogy": "A flavor index that groups similar tastes together, allowing a chef to find 'things that taste like this' instead of just matching names."
   },
   {
+    "category": "Frontend Frameworks",
+    "term": "Astro",
+    "explanation": "A modern static site builder focused on content-driven websites, prioritizing fast load times by shipping zero JavaScript by default (Astro Islands).",
+    "analogy": "The beautifully designed, traditional printed menu card that is fast to read, instantly accessible, and requires minimal mental processing from the diner."
+  },
+  {
+    "category": "UI/Design",
+    "term": "Lucide",
+    "explanation": "A consistent, open-source icon library used to provide visual representation for user interface actions and elements.",
+    "analogy": "The standardized set of decorative garnishes (e.g., a mint leaf for dessert, a parsley sprig for soup) used universally across all restaurant dishes to ensure clean, predictable plating aesthetics."
+  },
+  {
+    "category": "Frontend Frameworks",
+    "term": "Next.js",
+    "explanation": "A React framework for building full-stack web applications, supporting server-side rendering, static generation, and API routes.",
+    "analogy": "The entire interactive tablet menu system that allows diners to view dishes, place the order, see dynamic specials, and pay the bill, managing both the display and the kitchen communication."
+  },
+  {
+    "category": "Frontend Frameworks",
+    "term": "Qwik",
+    "explanation": "A framework designed for instant loading by deferring execution and allowing HTML and application state to be resumed precisely where the server left off (resumability).",
+    "analogy": "The 'Grab-and-Go' Delivery System that sends minimal data initially, only loading the specific station (code) the second the customer needs it, offering near-instant menu display."
+  },
+  {
     "category": "Data Communication",
     "term": "GraphQL",
     "explanation": "A query language for APIs and a server-side runtime for executing those queries, allowing clients to request exactly the data fields they need, reducing over-fetching.",
     "analogy": "The customizable digital ordering tablet. The diner only checks the exact boxes (data fields) for the ingredients and modifications they want, preventing the kitchen (server) from preparing unnecessary components."
+  },
+  {
+    "category": "Frontend Frameworks",
+    "term": "React",
+    "explanation": "A JavaScript library for building user interfaces, primarily focused on component-based architecture and efficient state management via a virtual DOM.",
+    "analogy": "The Head Chef specializing in designing individual, modular dishes (components) that are aesthetically pleasing and easily interchangeable on the menu."
+  },
+  {
+    "category": "Backend Services",
+    "term": "Supabase",
+    "explanation": "An open-source suite of backend services providing database, authentication, real-time subscriptions, and storage, often used as a Firebase alternative.",
+    "analogy": "The entire back-office operations suite: the computer handling reservations, the digital inventory spreadsheet, the security system, and the customer data storage, all managed by one team."
+  },
+  {
+    "category": "Frontend Frameworks",
+    "term": "SolidJS",
+    "explanation": "A declarative JavaScript library focused on highly efficient fine-grained reactivity achieved through compiled DOM manipulation, avoiding a virtual DOM.",
+    "analogy": "The specialized Equipment Technician who ensures the kitchen machinery (DOM updates) operates with absolute minimum friction, making every movement ultra-fast and surgically precise."
   },
   {
     "category": "Data Communication",
@@ -474,10 +144,64 @@
     "analogy": "The internal Kitchen Communication Protocol. Every order passed between the expediter and the chef must be verbally confirmed and typed exactly correct on the internal digital ticket system, ensuring zero misunderstanding about the ingredients or dish preparation."
   },
   {
+    "category": "Frontend Frameworks",
+    "term": "Svelte",
+    "explanation": "A compiler that shifts work from the browser to the build step, resulting in highly efficient, small bundles and true compile-time reactivity.",
+    "analogy": "The specialized Prep Cook who pre-packages complex ingredients into ultra-lean, optimized packets *before* the rush, meaning faster customer service because the server (browser) does less work."
+  },
+  {
+    "category": "Storage & Infrastructure",
+    "term": "shared file system",
+    "explanation": "A network storage architecture that allows multiple independent computer systems (clients/nodes) to concurrently access, read, write, and modify the same centralized pool of data and metadata, ensuring data consistency and implementing locking mechanisms to prevent simultaneous modification conflicts.",
+    "analogy": "The shared file system is the restaurant's massive, centralized **Walk-in Pantry and Recipe Archive**. All **Chefs (Clients/Nodes)** access this single, consistent source for their ingredients and standardized **Recipe Cards (Files)**. Because multiple chefs are pulling items and consulting recipes concurrently, the system must use special mechanisms (like a sign-out sheet or lock) to ensure that if Chef A takes the last rack of lamb, Chef B knows it is currently unavailable, preventing conflicts in the preparation of their individual **Menu Items (Applications)."
+  },
+  {
+    "category": "Frontend Frameworks",
+    "term": "Vue.js",
+    "explanation": "A progressive framework for building user interfaces, known for its gentle learning curve, two-way binding, and robust tooling ecosystem.",
+    "analogy": "The highly versatile Sous Chef who quickly adapts recipes, ensuring presentation (UI) is clean and straightforward, making it easy for any new cook to jump in."
+  },
+  {
     "category": "Data Communication",
     "term": "gRPC",
     "explanation": "A high-performance, open-source framework for remote procedure calls, using Protocol Buffers for efficient data serialization and HTTP/2 for transport.",
     "analogy": "A dedicated, extremely fast delivery chute system (HTTP/2) used for transmitting standardized, compressed packets (Protocol Buffers) of raw ingredients between different specialized kitchen stations."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Autoscaling",
+    "explanation": "A cloud feature that automatically adjusts the number of active servers based on real-time traffic and demand.",
+    "analogy": "Like a smart thermostat that automatically turns on more heaters as the room gets colder to maintain comfort."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Bare Metal",
+    "explanation": "A physical server dedicated to a single tenant, with no virtualization layer between the hardware and the operating system.",
+    "analogy": "Owning your own dedicated, heavy-duty stove and oven that only your chefs are allowed to touch."
+  },
+  {
+    "category": "Backend as a Service (BaaS)",
+    "term": "Appwrite",
+    "explanation": "A self-hosted, open-source backend server that provides developers with a set of core APIs for authentication, databases, file storage, and functions.",
+    "analogy": "The Dedicated Food Truck. It handles all its own operations, security, ingredient storage, and cooking processes using entirely self-managed, open-source equipment, allowing the owner complete control."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Container",
+    "explanation": "A lightweight, standalone package that contains an application and all its dependencies (code, runtime, system tools, libraries).",
+    "analogy": "A perfectly pre-measured meal kit box containing everything a chef needs to cook a specific dish in any kitchen."
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "Agentic Workloads",
+    "explanation": "Autonomous AI agents designed to perform long-running tasks, make decisions, and maintain context without constant human intervention.",
+    "analogy": "A tireless, robotic line cook that keeps working and preparing dishes between orders without needing to be told what to do next."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Dedicated Cluster",
+    "explanation": "An isolated group of computing resources (single-tenant) reserved exclusively for one customer to ensure security and performance.",
+    "analogy": "A private, exclusive restaurant venue that only your team is allowed to use for cooking and dining."
   },
   {
     "category": "Data Validation",
@@ -486,10 +210,46 @@
     "analogy": "The streamlined, highly efficient Quality Control Checker. They use only a small, specialized clipboard to rapidly verify that orders meet standards without slowing down the kitchen line."
   },
   {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "EKS (Elastic Kubernetes Service)",
+    "explanation": "A managed service provided by AWS that makes it easier to run Kubernetes without needing to install or operate your own control plane.",
+    "analogy": "Hiring AWS to provide the head waiter and manage all the kitchen coordination for you."
+  },
+  {
+    "category": "Backend as a Service (BaaS)",
+    "term": "Firebase",
+    "explanation": "Google's comprehensive platform providing backend services like databases, authentication, hosting, and analytics, primarily used for building mobile and web applications quickly.",
+    "analogy": "The All-Inclusive Corporate Caterer. They handle everything—setting up the tables, supplying the secure ingredients (Auth), managing the inventory (DB), and even hosting the event (Hosting)—all under one major contract."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "High Availability",
+    "explanation": "A system design approach that ensures a prearranged level of operational performance (uptime) during a period of time, usually through redundancy.",
+    "analogy": "Having a backup generator and a secondary water line so the restaurant stays open even during a city-wide outage."
+  },
+  {
     "category": "Data Validation",
     "term": "Zod",
     "explanation": "A TypeScript-first schema declaration and validation library, primarily used for ensuring runtime data integrity by defining expected shapes for data structures.",
     "analogy": "The rigorous Recipe Inspector who checks every incoming ingredient shipment (data input) and outgoing dish (data output) against a strictly defined recipe template (schema) to ensure quality and prevent errors."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Horizontal Scaling",
+    "explanation": "Increasing capacity by adding more servers to a system, allowing the workload to be shared across a cluster.",
+    "analogy": "Hiring a fleet of additional food trucks rather than just making your one truck bigger."
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "Egress Filtering",
+    "explanation": "A security practice that monitors and restricts data from leaving a private network to prevent unauthorized data exfiltration.",
+    "analogy": "A bouncer standing at the back door checking every outgoing food order to make sure no secret family recipes are being stolen."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Kubernetes (K8s)",
+    "explanation": "An open-source system for automating the deployment, scaling, and management of containerized applications across a cluster of machines.",
+    "analogy": "The master head waiter who coordinates hundreds of meal kits across multiple chefs and kitchens simultaneously."
   },
   {
     "category": "Database (Distributed)",
@@ -498,10 +258,40 @@
     "analogy": "The highly reliable, worldwide specialty ingredient supplier. They guarantee that every branch of the restaurant, regardless of location, receives the exact same ingredient quality at the exact same moment."
   },
   {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Long-Running Process",
+    "explanation": "A software task or service that maintains its state and memory over an extended period, essential for AI agents and real-time data streaming.",
+    "analogy": "A chef who keeps cooking throughout the day while remembering all past orders to ensure consistency."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Node (Cluster Node)",
+    "explanation": "A single physical or virtual machine within a cluster that is responsible for running specific workloads or applications.",
+    "analogy": "One specific kitchen location within a large restaurant chain."
+  },
+  {
+    "category": "Backend as a Service (BaaS)",
+    "term": "Pocketbase",
+    "explanation": "An open-source, single-file Go backend that combines a SQLite database, API, and admin dashboard into one small, portable package.",
+    "analogy": "The Highly Portable Catering Box. It contains the database (ingredients), the serving tools (API), and the order management system (Admin UI) all tightly packed into a single, easy-to-deploy unit."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Server (long-lived)",
+    "explanation": "A computer system that remains continuously operational to provide data, services, or resources to other computers on a network.",
+    "analogy": "A full-time chef who stays on duty all day and remembers ongoing orders."
+  },
+  {
     "category": "Database (Edge)",
     "term": "Turso",
     "explanation": "A globally distributed database based on SQLite, designed for edge computing to provide low latency data access close to the user.",
     "analogy": "Small, localized 'quick-prep' refrigerators installed directly near every service station in the dining room, ensuring that frequently needed ingredients are available immediately without waiting for the main pantry."
+  },
+  {
+    "category": "Storage Architecture",
+    "term": "persistent file system",
+    "explanation": "A data storage and retrieval methodology implemented via an operating system that guarantees stored files and directory structures remain intact and accessible across system restarts, power failures, or application terminations, utilizing non-volatile storage media such as hard disk drives (HDDs) or solid-state drives (SSDs).",
+    "analogy": "Imagine the Kitchen Manager implements a strict protocol ensuring that every time a Chef finishes creating a new dish (data), the detailed recipe (file) is immediately archived in the permanent, labeled Recipe Vault (non-volatile storage) rather than just scribbled on the temporary prep counter (RAM). This system guarantees that the full Menu (directory structure) and all associated dishes remain perfectly accessible to the Diners, even if the entire restaurant shuts down and reopens the next morning."
   },
   {
     "category": "Database (Non-Relational)",
@@ -510,10 +300,46 @@
     "analogy": "The modern Bulk Storage Manager who organizes the pantry based on usage and type (e.g., a massive bin for all dairy items, another for all spices), allowing for fast access and flexible additions without reorganizing the entire system."
   },
   {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Server (short-lived)",
+    "explanation": "Compute instances designed for temporary tasks (jobs, cron jobs) that spin up to perform a specific function and then immediately shut down.",
+    "analogy": "A temp cook hired specifically for the dinner rush who leaves once the rush is over."
+  },
+  {
+    "category": "Build Automation",
+    "term": "Earthly",
+    "explanation": "A build automation tool that allows developers to define builds using Earthfile (a declarative language) ensuring reproducibility regardless of the environment.",
+    "analogy": "The standard set of 'Kitchen Blueprints' ensuring every build (mixing, baking, frying) is executed in a clean, reproducible containerized environment, guaranteeing consistent quality control across all locations."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Serverless (FaaS)",
+    "explanation": "A cloud model where developers write code (functions) that run in response to events without managing any server infrastructure.",
+    "analogy": "A pop-up food truck that appears only when an order is placed, cooks that one meal, and then vanishes instantly."
+  },
+  {
     "category": "Database (Relational)",
     "term": "SQL",
     "explanation": "Structured Query Language, the standard domain-specific language used for managing and manipulating relational databases (structured data).",
     "analogy": "The meticulous Inventory Manager who maintains detailed, structured ledgers (spreadsheets) that dictate exactly how many units of specific ingredients are available and their exact relationships (e.g., 'This sauce requires exactly 3 ingredients from Storage Bin A')."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Traditional Infrastructure",
+    "explanation": "A computing model (like VMs or Bare Metal) that gives full control to the user but requires manual management of the servers and OS.",
+    "analogy": "Cooking at home: you have to buy all the ingredients, manage the stove, and do all the cleanup yourself."
+  },
+  {
+    "category": "Process Automation",
+    "term": "workflows",
+    "explanation": "A workflow is a structured, repeatable sequence of interconnected activities, tasks, or computational steps designed to transform data, process information, or achieve a predefined business outcome. Workflows often rely on defined rules, conditional logic, and state transitions to manage the flow of control and data between disparate systems or human input points.",
+    "analogy": "The workflow is the precise, repeatable system followed by the kitchen staff when a Diner places an order. It begins with the Waiter entering the Menu item (trigger), proceeds through a set sequence of tasks—like the Prep Chef preparing ingredients and the Line Chef cooking (processing steps)—and concludes only when the Expediter validates the plate and the Waiter delivers the finished meal, ensuring consistent quality and predictable delivery time for every order."
+  },
+  {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Vertical Scaling",
+    "explanation": "Increasing the capacity of a single server by adding more power (CPU, RAM) to its existing hardware.",
+    "analogy": "Expanding your small food truck into a massive, high-tech restaurant kitchen."
   },
   {
     "category": "Database (Serverless)",
@@ -522,16 +348,70 @@
     "analogy": "The infinitely expandable, high-availability refrigerated warehouse. You can reorganize the shelves (schema changes) or expand the capacity immediately without ever needing to close the kitchen for inventory or maintenance."
   },
   {
+    "category": "Infrastructure & Compute (Kitchen and Staff)",
+    "term": "Virtual Machine (VM)",
+    "explanation": "An emulation of a computer system that runs as a software-defined 'guest' on a physical host server.",
+    "analogy": "Renting a private, fully-equipped kitchen stall within a large, shared commercial food hall."
+  },
+  {
     "category": "Database ORM",
     "term": "Drizzle ORM",
     "explanation": "A lightweight, TypeScript-first ORM designed for performance and flexibility with modern databases, known for its minimal bundle size.",
     "analogy": "A specialized, custom-built trolley system designed purely for quickly moving hot plates from the stove to the plating station, prioritizing speed and minimal fuss over complex features."
   },
   {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "API (Application Programming Interface)",
+    "explanation": "A standardized set of rules and protocols that allows one software application to interact with and request data from another.",
+    "analogy": "A menu that lists exactly what you can order from the kitchen without needing to see how the chefs are actually cooking it."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "API Access",
+    "explanation": "The programmatic entry points and permissions that allow external developers or systems to integrate with an application.",
+    "analogy": "A dedicated drive-through window where other automated systems can place and pick up orders without coming inside."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "Cross-Project Access",
+    "explanation": "Permissions that allow a user or service to access resources across different development projects or cloud environments.",
+    "analogy": "A single master building pass that opens the doors to multiple different office floors and kitchen stations."
+  },
+  {
+    "category": "CI/CD",
+    "term": "CircleCI",
+    "explanation": "A continuous integration and continuous delivery platform that automates the software development process, focusing on speed and parallel execution.",
+    "analogy": "A highly optimized, parallelized prep station line. It can chop vegetables, mix dough, and marinate meat simultaneously and quickly verify ingredient quality before serving."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "Encryption",
+    "explanation": "The process of encoding data so that only authorized parties with the correct key can read it, both at rest and in transit.",
+    "analogy": "Locking the master keys in a heavy steel safe and using an armored truck to transport them to another restaurant location."
+  },
+  {
     "category": "Database ORM",
     "term": "Prisma",
     "explanation": "A next-generation ORM (Object-Relational Mapper) that simplifies database access with type-safe schema definitions and automated migrations.",
     "analogy": "The standardized, clearly labeled shelving system in the pantry that ensures every chef knows exactly where an ingredient (data) is stored and what container (type) it’s in, preventing mistakes."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "ISO 27001 / HIPAA",
+    "explanation": "International security frameworks and government regulations that establish strict standards for data protection and privacy.",
+    "analogy": "Official health and safety certifications proving that your kitchen meets the absolute highest standards of cleanliness and security."
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "File System (Cloud/Network)",
+    "explanation": "A method and data structure that an operating system uses to keep track of files on a disk or across a network.",
+    "analogy": "A massive, perfectly labeled kitchen pantry where any chef can quickly find the exact ingredients they need for their station."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "Marketplace (Integrations)",
+    "explanation": "A curated catalog of third-party tools, add-ons, and services that can be easily plugged into an existing platform or application.",
+    "analogy": "A massive supplier market attached to your kitchen where you can quickly buy and plug in new specialized cooking tools."
   },
   {
     "category": "Database Services",
@@ -546,16 +426,58 @@
     "analogy": "The high-speed industrial shredder used strictly for quickly totaling up the daily receipts and sales figures (OLAP) across all restaurant locations."
   },
   {
+    "category": "CI/CD",
+    "term": "Concourse",
+    "explanation": "An open-source CI/CD system designed for scaling, emphasizing resource isolation and declarative pipelines defined by configuration.",
+    "analogy": "The Industrial Kitchen Conveyor Belt system. Every task (testing, cooking, packaging) is defined as a separate, isolated step on the belt, ensuring strict separation and clear status visualization."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "RBAC (Role-Based Access Control)",
+    "explanation": "A method of regulating access to computer or network resources based on the roles of individual users within an organization.",
+    "analogy": "Giving different badges to kitchen staff vs. front-of-house staff, so only chefs can enter the walk-in freezer."
+  },
+  {
     "category": "Database: Embedded/Analytical",
     "term": "DuckDB",
     "explanation": "An in-process analytical data management system optimized for complex queries on local data, often used for client-side analytics.",
     "analogy": "The chef's personalized, incredibly fast chopping board and knife set used right at the station for immediate, localized ingredient preparation and analysis."
   },
   {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "REST API",
+    "explanation": "A standardized architecture for web APIs that uses HTTP verbs (GET, POST, PUT, DELETE) and readable URLs to manage data.",
+    "analogy": "A restaurant menu that lets you order food using specific phrases: 'GET burger', 'POST order', or 'DELETE reservation'."
+  },
+  {
+    "category": "AI & Modern App Concepts (New Kitchen Techniques)",
+    "term": "Fine-Tuning",
+    "explanation": "The process of taking a pre-trained AI model and training it further on a specific, smaller dataset to improve its performance for a particular task.",
+    "analogy": "Taking a general, world-class recipe and slightly adjusting it with your grandmother's secret spice mix to suit your local customers' taste."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "SAML / SSO",
+    "explanation": "Federated authentication protocols that allow users to log in to multiple separate applications with a single set of credentials.",
+    "analogy": "One single digital keycard that opens every door in the building, from the lobby to the private dining rooms."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "SCIM (Identity Provisioning)",
+    "explanation": "A standard for automating the exchange of user identity information between different identity domains and applications.",
+    "analogy": "An automated HR system that instantly issues or revokes staff badges the exact moment someone joins or leaves the company."
+  },
+  {
     "category": "Database: Global Distributed",
     "term": "Spanner",
     "explanation": "Google's globally distributed, highly consistent, and horizontally scalable relational database service.",
     "analogy": "The massive, globally interconnected supply chain system that ensures every restaurant branch worldwide gets exactly the same, fresh ingredients at the exact same time, down to the millisecond."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "Secrets",
+    "explanation": "Highly sensitive pieces of data (e.g., API keys, passwords, database credentials) that must be stored and accessed securely.",
+    "analogy": "The heavy master keys to the pantry, the cash register, and the head chef's private office."
   },
   {
     "category": "Database: HTAP/Distributed",
@@ -568,6 +490,12 @@
     "term": "SingleStore",
     "explanation": "A distributed SQL database designed for high-performance transactional and analytical processing (HTAP) simultaneously.",
     "analogy": "The versatile, central main cooking range that handles both high-volume short-order requests (OLTP) and complex, large batch preparations (OLAP) seamlessly and instantly."
+  },
+  {
+    "category": "Integration & Access (Menus, Doorbells, Keys)",
+    "term": "Webhook",
+    "explanation": "A method for one application to provide other applications with real-time information by sending an automated 'push' notification when an event occurs.",
+    "analogy": "Receiving an automated text message from the kitchen the exact moment your takeout order is bagged and ready for pickup."
   },
   {
     "category": "Database: Highly Distributed/Fault Tolerant",
@@ -594,462 +522,6 @@
     "analogy": "The highly optimized, pre-sorted inventory shelf in the pantry where items are stored based on quick retrieval codes (keys) for guaranteed fast service, managed entirely by the landlord (AWS)."
   },
   {
-    "category": "Database: NoSQL Wide-Column",
-    "term": "Cassandra",
-    "explanation": "A distributed, highly available NoSQL database known for linear scalability and excellent performance for write-heavy workloads.",
-    "analogy": "The industrial-scale, multi-regional deep freezer system that handles massive, continuous inflow of prepared ingredients (writes) across many storage units, designed never to fail or run out of space."
-  },
-  {
-    "category": "Decision Algorithms",
-    "term": "MiniMax",
-    "explanation": "A decision rule used in game theory and AI to minimize the maximum possible loss, assuming the opponent plays optimally.",
-    "analogy": "The General Manager's operational philosophy: 'Always choose the menu pricing and seating arrangement that ensures the worst possible scenario (maximum empty tables) still yields a profit.'"
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "Blue-Green Deployment",
-    "explanation": "A strategy that reduces downtime by running two identical production environments, one 'live' and one 'idle' for testing the new version.",
-    "analogy": "Setting up a brand new stage next to the old one, testing the lights and sound, and then instantly moving the audience over when ready."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "CI/CD",
-    "explanation": "A method to frequently deliver apps to customers by introducing automation into the stages of app development (Integration and Deployment).",
-    "analogy": "An automated conveyor-belt kitchen that continuously preps, tests, cooks, and serves new dishes to customers as they are invented."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "CLI (Command Line Interface)",
-    "explanation": "A text-based interface used to interact with software and operating systems by typing specific commands into a terminal.",
-    "analogy": "Shouting quick, efficient shorthand codes across a busy kitchen line instead of filling out a detailed three-page order form."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "Canary Deployment",
-    "explanation": "A deployment strategy where a new version of software is rolled out to a small subset of users before making it available to everyone.",
-    "analogy": "Serving a new, experimental dish to just three tables to see their reaction before adding it to the official menu for the whole night."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "Deployment Strategies",
-    "explanation": "Techniques used to release new versions of software to users while minimizing downtime and risk.",
-    "analogy": "Hostess testing a new menu item with just a few regulars before printing it in every menu for the entire city."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "Durable Workflow",
-    "explanation": "A long-running, fault-tolerant sequence of tasks that maintains its state even if the underlying system fails or restarts.",
-    "analogy": "A complex meal prep that can be paused and restarted exactly where it left off, even if the kitchen briefly loses power."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "IaC (Infrastructure as Code)",
-    "explanation": "The process of managing and provisioning computer data centers through machine-readable definition files rather than manual hardware configuration.",
-    "analogy": "A master blueprint book that allows you to rebuild the exact same restaurant setup, down to the last fork, in any new city instantly."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "IaC Alternatives (ClickOps)",
-    "explanation": "The practice of manually configuring cloud infrastructure through a web-based user interface (GUI) rather than using code.",
-    "analogy": "Setting up your kitchen based on intuition and memory, clicking around to find where the stove goes instead of following a blueprint."
-  },
-  {
-    "category": "Delivery & Automation (Restaurant Processes and Automation)",
-    "term": "Performance Build Pipeline",
-    "explanation": "An automated CI/CD workflow that includes specific steps to test and ensure the speed and efficiency of the code before deployment.",
-    "analogy": "A high-speed assembly line that runs every new dish through a series of speed and safety tests before allowing it to be served."
-  },
-  {
-    "category": "Deployment & Hosting",
-    "term": "Render",
-    "explanation": "A unified cloud platform offering hosting for web services, databases, cron jobs, and APIs, simplifying full-stack deployment under a single roof.",
-    "analogy": "The general contractor who manages the entire restaurant construction, handling the kitchen, dining room, plumbing, and electrical systems cohesively."
-  },
-  {
-    "category": "Deployment & Hosting",
-    "term": "Vercel",
-    "explanation": "A platform specializing in static site hosting and serverless functions, optimized for rapid deployment and high performance of frontend applications.",
-    "analogy": "The architect and construction crew that specializes in building beautiful, modern dining rooms and ensuring the waitstaff stations are aesthetically pleasing and efficient."
-  },
-  {
-    "category": "Deployment & Infrastructure",
-    "term": "Fly.io",
-    "explanation": "A platform focused on deploying applications close to users (the edge) using lightweight virtualization (Firecracker VMs) for low latency globally.",
-    "analogy": "A high-end catering service that sets up satellite kitchens in various cities globally, ensuring diners always get their food fresh and fast because the kitchen is physically close to their location."
-  },
-  {
-    "category": "Deployment & Infrastructure",
-    "term": "Railway",
-    "explanation": "A deployment platform that allows developers to provision infrastructure based on code and configuration, simplifying service linking and dependency management.",
-    "analogy": "The utility control panel where flipping a single switch instantly turns on the fryer, the convection oven, and the prep station simultaneously, all pre-configured to work together perfectly."
-  },
-  {
-    "category": "DevOps Platform",
-    "term": "GitLab",
-    "explanation": "A complete DevOps platform delivered as a single application, offering Git repository management, CI/CD, security, and monitoring.",
-    "analogy": "The Integrated Kitchen Management System (KMS): It holds the recipes (Git), includes the automated cook line (CI/CD), and handles inventory tracking and security checks all in one application."
-  },
-  {
-    "category": "DevOps/CM",
-    "term": "Ansible",
-    "explanation": "An agentless automation engine used for configuration management, application deployment, and orchestration, relying on existing connection methods like SSH.",
-    "analogy": "The 'Task Manager' who uses simple spoken instructions ('ensure all fryers are at 375 degrees') delivered directly to the kitchen staff without requiring dedicated monitoring software (agents) to be installed on every machine."
-  },
-  {
-    "category": "DevOps/CM",
-    "term": "Chef",
-    "explanation": "A configuration management tool that uses 'Recipes' and 'Cookbooks' written in Ruby to define the desired state of infrastructure, requiring agents on managed nodes.",
-    "analogy": "The 'Veteran Head Chef' who writes detailed Ruby scripts ('Cookbooks') that every kitchen appliance (server) must run precisely to maintain the operational standard, requiring a dedicated assistant (agent) on each appliance."
-  },
-  {
-    "category": "DevOps/CM",
-    "term": "Puppet",
-    "explanation": "A configuration management tool that uses a declarative, model-based approach to enforce desired system state across managed nodes, typically requiring agents.",
-    "analogy": "The 'Rule Enforcer' who defines the strict, declarative policy ('All tables must be set with silverware pointing north') and regularly checks and automatically corrects (enforces state) every managed area."
-  },
-  {
-    "category": "DevOps/Observability",
-    "term": "Jaeger",
-    "explanation": "An open-source distributed tracing system used for monitoring and troubleshooting complex microservices environments by tracking requests end-to-end.",
-    "analogy": "The detailed 'Food Inspector' who follows a single customer order (request) through every step of the kitchen line, identifying precisely where delays or errors occurred."
-  },
-  {
-    "category": "DevOps/Observability",
-    "term": "Loki",
-    "explanation": "A log aggregation system optimized for indexing logs by labels (metadata) rather than full text, designed to be cost-effective and horizontally scalable.",
-    "analogy": "The 'Dishwashers' Logbook,' where short notes (labels like 'Table 4' or 'Waitress B') are taken about cleaning events, allowing quick filtering without reading every entry line-by-line."
-  },
-  {
-    "category": "DevOps/Observability",
-    "term": "OpenTelemetry",
-    "explanation": "A vendor-neutral set of tools, APIs, and SDKs that standardize the generation, collection, and export of telemetry data (metrics, logs, and traces).",
-    "analogy": "The standardized 'Recipe Card Format' that ensures every kitchen station (metrics, logs, traces) records operational details using the exact same structure and terminology."
-  },
-  {
-    "category": "DevOps/Observability",
-    "term": "Tempo",
-    "explanation": "A high-volume, low-cost distributed tracing backend compatible with OpenTelemetry and Jaeger, focusing on trace ingestion and retrieval without indexing trace content.",
-    "analogy": "The 'High-Speed Surveillance System' that records every moment a dish is being prepared (trace data), storing the video efficiently without expensive indexing, relying on external clues to find the video later."
-  },
-  {
-    "category": "DevOps/Observability",
-    "term": "Vector",
-    "explanation": "An open-source, high-performance tool for collecting, transforming, and routing logs, metrics, and traces from diverse sources to various destinations.",
-    "analogy": "The dedicated 'Kitchen Runner' who efficiently gathers ingredients (logs/metrics) from different storerooms, repackages them (transforms data), and delivers them to the correct analysis desk (routing)."
-  },
-  {
-    "category": "DevOps/Package Mgmt",
-    "term": "APT",
-    "explanation": "Advanced Package Tool, the core package management system used by Debian and Ubuntu Linux distributions for installing, upgrading, and removing software.",
-    "analogy": "The 'Official Delivery Service' for the Ubuntu Restaurant Chain, strictly managing the flow of certified ingredients (packages) from the central warehouse."
-  },
-  {
-    "category": "DevOps/Package Mgmt",
-    "term": "Choco",
-    "explanation": "Chocolatey, a package manager for Windows that works like APT or YUM, focused on automating software installation and configuration.",
-    "analogy": "The 'Windows Vending Machine' that dispenses complex software packages and automatically handles all necessary setup requirements and dependencies upon selection."
-  },
-  {
-    "category": "DevOps/Package Mgmt",
-    "term": "DNF",
-    "explanation": "The next-generation package manager for RPM-based Linux distributions like Fedora and RHEL, replacing the older YUM utility.",
-    "analogy": "The 'Modernized Logistics Manager' for the Fedora/RHEL chain, replacing the old, slow inventory system (YUM) with a faster, more dependency-aware approach."
-  },
-  {
-    "category": "DevOps/Package Mgmt",
-    "term": "Homebrew",
-    "explanation": "A popular package manager for macOS and Linux, simplifying the installation of software and dependencies typically via the command line.",
-    "analogy": "The 'General Store Manager' for the Mac platform, making it easy for cooks to walk in and grab pre-packaged, verified tools (software) instantly."
-  },
-  {
-    "category": "DevOps/Package Mgmt",
-    "term": "Scoop",
-    "explanation": "A command-line installer for Windows focused on providing portable, isolated software environments without requiring administrative privileges.",
-    "analogy": "The 'Personal Tool Chest' that allows a chef to download and use their preferred specialty tools (software) right at their station without needing the General Manager’s (Admin) sign-off."
-  },
-  {
-    "category": "DevOps/Package Mgmt",
-    "term": "Winget",
-    "explanation": "A free and open-source command-line package manager for Windows, allowing users to install, upgrade, and manage applications easily.",
-    "analogy": "The 'Quick Grab & Go Cart' at the Windows Cafe, offering a centralized, validated source for standard application installations."
-  },
-  {
-    "category": "DevOps/System Mgmt",
-    "term": "Nix",
-    "explanation": "A purely functional package manager and system configuration tool that ensures reproducible builds and atomic upgrades by isolating dependencies in unique, cryptographic paths.",
-    "analogy": "The 'Scientific Food Lab' where every ingredient (dependency) is stored in an isolated, version-controlled vault to guarantee that recreating a complex dish years later is 100% exact and reproducible."
-  },
-  {
-    "category": "DevOps: Configuration",
-    "term": "Kustomize",
-    "explanation": "A tool for customizing Kubernetes configurations declaratively without modifying the original source YAML manifests.",
-    "analogy": "The 'chef's notes' attached to the standardized recipe (Helm), allowing minor tweaks (e.g., 'use less salt,' 'larger plate') for a specific delivery without changing the core recipe book."
-  },
-  {
-    "category": "DevOps: GitOps (Pull)",
-    "term": "ArgoCD",
-    "explanation": "A declarative, GitOps continuous delivery tool for Kubernetes, managing application state by continuously syncing with a Git repository.",
-    "analogy": "The automated kitchen manager who constantly checks the master recipe blueprint (Git repo) and immediately pulls ingredients and adjusts the live production line (the kitchen) to match any approved changes."
-  },
-  {
-    "category": "DevOps: GitOps (Push)",
-    "term": "Flux",
-    "explanation": "A GitOps tool that ensures the state of a cluster matches the configuration defined in a Git repository, pushing configurations to the cluster.",
-    "analogy": "The automated ingredient restocking system that continuously monitors the inventory list (Git) and immediately pushes the required items to the chef stations whenever stock runs low."
-  },
-  {
-    "category": "DevOps: Orchestration",
-    "term": "Kubernetes",
-    "explanation": "An open-source system for automating the deployment, scaling, and management of containerized applications.",
-    "analogy": "The highly sophisticated Head Waiter/Maitre D' who manages the entire dining floor, ensuring tables are seated, orders are distributed, and backups are ready if a server calls in sick."
-  },
-  {
-    "category": "DevOps: Packaging/Templating",
-    "term": "Helm",
-    "explanation": "The package manager for Kubernetes, allowing users to define, install, and upgrade complex applications using charts (pre-configured templates).",
-    "analogy": "The standardized instruction manual/recipe book ('chart') for setting up an entire, complex meal service, making it easy to replicate the entire restaurant setup quickly."
-  },
-  {
-    "category": "DevOps: Runtime",
-    "term": "Docker",
-    "explanation": "A platform that packages applications and their dependencies into lightweight, portable containers (images) for consistent execution.",
-    "analogy": "Standardized, reusable storage containers (Tupperware) used to perfectly package specific prepared meal components for transport or staging, ensuring consistency regardless of the location they are opened."
-  },
-  {
-    "category": "DevOps: Runtime Alternative",
-    "term": "Podman",
-    "explanation": "A daemonless container engine for developing, managing, and running OCI containers, often seen as a secure, rootless alternative to Docker.",
-    "analogy": "The highly secure, personalized chef's tool chest that holds their specialized equipment, managed only by the chef (rootless) without needing a central shop foreman (daemon) to operate."
-  },
-  {
-    "category": "Edge Compute",
-    "term": "Cloudflare Workers",
-    "explanation": "A serverless execution environment that allows developers to run code at the edge of the network (closest to the user) for high performance and low latency.",
-    "analogy": "The highly efficient Waiter running code directly on their P.O.S. tablet at the table. They handle simple tasks (like minor menu adjustments or input validation) instantly without needing to talk back to the main kitchen server."
-  },
-  {
-    "category": "Email & Communication",
-    "term": "Resend",
-    "explanation": "A developer-friendly API for sending transactional and marketing emails with high deliverability and simplified integration.",
-    "analogy": "The dedicated communication service responsible only for sending professional, reliable electronic messages like reservation confirmations, payment receipts, and delivery tracking updates."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "Angular",
-    "explanation": "A comprehensive, opinionated framework maintained by Google, used for large-scale, complex applications, enforcing robust structural patterns (MVC/MVVM).",
-    "analogy": "The Corporate Kitchen Manager who dictates the entire Standard Operating Procedure (SOP), ensuring all staff and systems adhere to strict, formal, complex protocols."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "Astro",
-    "explanation": "A modern static site builder focused on content-driven websites, prioritizing fast load times by shipping zero JavaScript by default (Astro Islands).",
-    "analogy": "The beautifully designed, traditional printed menu card that is fast to read, instantly accessible, and requires minimal mental processing from the diner."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "Next.js",
-    "explanation": "A React framework for building full-stack web applications, supporting server-side rendering, static generation, and API routes.",
-    "analogy": "The entire interactive tablet menu system that allows diners to view dishes, place the order, see dynamic specials, and pay the bill, managing both the display and the kitchen communication."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "Qwik",
-    "explanation": "A framework designed for instant loading by deferring execution and allowing HTML and application state to be resumed precisely where the server left off (resumability).",
-    "analogy": "The 'Grab-and-Go' Delivery System that sends minimal data initially, only loading the specific station (code) the second the customer needs it, offering near-instant menu display."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "React",
-    "explanation": "A JavaScript library for building user interfaces, primarily focused on component-based architecture and efficient state management via a virtual DOM.",
-    "analogy": "The Head Chef specializing in designing individual, modular dishes (components) that are aesthetically pleasing and easily interchangeable on the menu."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "SolidJS",
-    "explanation": "A declarative JavaScript library focused on highly efficient fine-grained reactivity achieved through compiled DOM manipulation, avoiding a virtual DOM.",
-    "analogy": "The specialized Equipment Technician who ensures the kitchen machinery (DOM updates) operates with absolute minimum friction, making every movement ultra-fast and surgically precise."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "Svelte",
-    "explanation": "A compiler that shifts work from the browser to the build step, resulting in highly efficient, small bundles and true compile-time reactivity.",
-    "analogy": "The specialized Prep Cook who pre-packages complex ingredients into ultra-lean, optimized packets *before* the rush, meaning faster customer service because the server (browser) does less work."
-  },
-  {
-    "category": "Frontend Frameworks",
-    "term": "Vue.js",
-    "explanation": "A progressive framework for building user interfaces, known for its gentle learning curve, two-way binding, and robust tooling ecosystem.",
-    "analogy": "The highly versatile Sous Chef who quickly adapts recipes, ensuring presentation (UI) is clean and straightforward, making it easy for any new cook to jump in."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Autoscaling",
-    "explanation": "A cloud feature that automatically adjusts the number of active servers based on real-time traffic and demand.",
-    "analogy": "Like a smart thermostat that automatically turns on more heaters as the room gets colder to maintain comfort."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Bare Metal",
-    "explanation": "A physical server dedicated to a single tenant, with no virtualization layer between the hardware and the operating system.",
-    "analogy": "Owning your own dedicated, heavy-duty stove and oven that only your chefs are allowed to touch."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Container",
-    "explanation": "A lightweight, standalone package that contains an application and all its dependencies (code, runtime, system tools, libraries).",
-    "analogy": "A perfectly pre-measured meal kit box containing everything a chef needs to cook a specific dish in any kitchen."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Dedicated Cluster",
-    "explanation": "An isolated group of computing resources (single-tenant) reserved exclusively for one customer to ensure security and performance.",
-    "analogy": "A private, exclusive restaurant venue that only your team is allowed to use for cooking and dining."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "EKS (Elastic Kubernetes Service)",
-    "explanation": "A managed service provided by AWS that makes it easier to run Kubernetes without needing to install or operate your own control plane.",
-    "analogy": "Hiring AWS to provide the head waiter and manage all the kitchen coordination for you."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "High Availability",
-    "explanation": "A system design approach that ensures a prearranged level of operational performance (uptime) during a period of time, usually through redundancy.",
-    "analogy": "Having a backup generator and a secondary water line so the restaurant stays open even during a city-wide outage."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Horizontal Scaling",
-    "explanation": "Increasing capacity by adding more servers to a system, allowing the workload to be shared across a cluster.",
-    "analogy": "Hiring a fleet of additional food trucks rather than just making your one truck bigger."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Kubernetes (K8s)",
-    "explanation": "An open-source system for automating the deployment, scaling, and management of containerized applications across a cluster of machines.",
-    "analogy": "The master head waiter who coordinates hundreds of meal kits across multiple chefs and kitchens simultaneously."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Long-Running Process",
-    "explanation": "A software task or service that maintains its state and memory over an extended period, essential for AI agents and real-time data streaming.",
-    "analogy": "A chef who keeps cooking throughout the day while remembering all past orders to ensure consistency."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Node (Cluster Node)",
-    "explanation": "A single physical or virtual machine within a cluster that is responsible for running specific workloads or applications.",
-    "analogy": "One specific kitchen location within a large restaurant chain."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Server (long-lived)",
-    "explanation": "A computer system that remains continuously operational to provide data, services, or resources to other computers on a network.",
-    "analogy": "A full-time chef who stays on duty all day and remembers ongoing orders."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Server (short-lived)",
-    "explanation": "Compute instances designed for temporary tasks (jobs, cron jobs) that spin up to perform a specific function and then immediately shut down.",
-    "analogy": "A temp cook hired specifically for the dinner rush who leaves once the rush is over."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Serverless (FaaS)",
-    "explanation": "A cloud model where developers write code (functions) that run in response to events without managing any server infrastructure.",
-    "analogy": "A pop-up food truck that appears only when an order is placed, cooks that one meal, and then vanishes instantly."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Traditional Infrastructure",
-    "explanation": "A computing model (like VMs or Bare Metal) that gives full control to the user but requires manual management of the servers and OS.",
-    "analogy": "Cooking at home: you have to buy all the ingredients, manage the stove, and do all the cleanup yourself."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Vertical Scaling",
-    "explanation": "Increasing the capacity of a single server by adding more power (CPU, RAM) to its existing hardware.",
-    "analogy": "Expanding your small food truck into a massive, high-tech restaurant kitchen."
-  },
-  {
-    "category": "Infrastructure & Compute (Kitchen and Staff)",
-    "term": "Virtual Machine (VM)",
-    "explanation": "An emulation of a computer system that runs as a software-defined 'guest' on a physical host server.",
-    "analogy": "Renting a private, fully-equipped kitchen stall within a large, shared commercial food hall."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "API (Application Programming Interface)",
-    "explanation": "A standardized set of rules and protocols that allows one software application to interact with and request data from another.",
-    "analogy": "A menu that lists exactly what you can order from the kitchen without needing to see how the chefs are actually cooking it."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "API Access",
-    "explanation": "The programmatic entry points and permissions that allow external developers or systems to integrate with an application.",
-    "analogy": "A dedicated drive-through window where other automated systems can place and pick up orders without coming inside."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "Cross-Project Access",
-    "explanation": "Permissions that allow a user or service to access resources across different development projects or cloud environments.",
-    "analogy": "A single master building pass that opens the doors to multiple different office floors and kitchen stations."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "Encryption",
-    "explanation": "The process of encoding data so that only authorized parties with the correct key can read it, both at rest and in transit.",
-    "analogy": "Locking the master keys in a heavy steel safe and using an armored truck to transport them to another restaurant location."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "ISO 27001 / HIPAA",
-    "explanation": "International security frameworks and government regulations that establish strict standards for data protection and privacy.",
-    "analogy": "Official health and safety certifications proving that your kitchen meets the absolute highest standards of cleanliness and security."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "Marketplace (Integrations)",
-    "explanation": "A curated catalog of third-party tools, add-ons, and services that can be easily plugged into an existing platform or application.",
-    "analogy": "A massive supplier market attached to your kitchen where you can quickly buy and plug in new specialized cooking tools."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "RBAC (Role-Based Access Control)",
-    "explanation": "A method of regulating access to computer or network resources based on the roles of individual users within an organization.",
-    "analogy": "Giving different badges to kitchen staff vs. front-of-house staff, so only chefs can enter the walk-in freezer."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "REST API",
-    "explanation": "A standardized architecture for web APIs that uses HTTP verbs (GET, POST, PUT, DELETE) and readable URLs to manage data.",
-    "analogy": "A restaurant menu that lets you order food using specific phrases: 'GET burger', 'POST order', or 'DELETE reservation'."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "SAML / SSO",
-    "explanation": "Federated authentication protocols that allow users to log in to multiple separate applications with a single set of credentials.",
-    "analogy": "One single digital keycard that opens every door in the building, from the lobby to the private dining rooms."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "SCIM (Identity Provisioning)",
-    "explanation": "A standard for automating the exchange of user identity information between different identity domains and applications.",
-    "analogy": "An automated HR system that instantly issues or revokes staff badges the exact moment someone joins or leaves the company."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "Secrets",
-    "explanation": "Highly sensitive pieces of data (e.g., API keys, passwords, database credentials) that must be stored and accessed securely.",
-    "analogy": "The heavy master keys to the pantry, the cash register, and the head chef's private office."
-  },
-  {
-    "category": "Integration & Access (Menus, Doorbells, Keys)",
-    "term": "Webhook",
-    "explanation": "A method for one application to provide other applications with real-time information by sending an automated 'push' notification when an event occurs.",
-    "analogy": "Receiving an automated text message from the kitchen the exact moment your takeout order is bagged and ready for pickup."
-  },
-  {
     "category": "Language & Runtime",
     "term": "C#",
     "explanation": "A modern, object-oriented language developed by Microsoft, typically used with the .NET framework for building enterprise applications, cloud services, and Windows apps.",
@@ -1060,6 +532,12 @@
     "term": "C++",
     "explanation": "A powerful, compiled, object-oriented language used primarily for systems programming, game engines, and applications requiring maximum performance and direct hardware access.",
     "analogy": "The Engine Room Specialist. This chef builds and optimizes the high-performance core machinery of the kitchen—the industrial ovens, specialized grinders, and deep freezers—ensuring maximum speed and resource control."
+  },
+  {
+    "category": "Database: NoSQL Wide-Column",
+    "term": "Cassandra",
+    "explanation": "A distributed, highly available NoSQL database known for linear scalability and excellent performance for write-heavy workloads.",
+    "analogy": "The industrial-scale, multi-regional deep freezer system that handles massive, continuous inflow of prepared ingredients (writes) across many storage units, designed never to fail or run out of space."
   },
   {
     "category": "Language & Runtime",
@@ -1632,189 +1110,33 @@
     "analogy": "The Kitchen Manager who strictly enforces health codes and security checks (permissions) on all incoming ingredients (code), ensuring a secure and modern preparation environment."
   },
   {
-    "category": "Runtimes and Environments",
-    "term": "Node.js",
-    "explanation": "An open-source, server-side JavaScript runtime environment built on Chrome's V8 engine, enabling non-blocking I/O operations.",
-    "analogy": "The Main Power Grid and Central Vent Hood System in the kitchen, providing the necessary electricity (runtime) and infrastructure for all the chefs (code) to operate concurrently."
+    "category": "Mobile Operating System (OS)",
+    "term": "Android",
+    "explanation": "Android is an open-source, Linux-based mobile operating system developed by Google. It serves as a comprehensive software stack for mobile devices, comprising a kernel, middleware, and core applications, providing an execution environment and framework (SDK) for third-party application development (APK).",
+    "analogy": "Android is the standardized, open-source Kitchen Infrastructure and Management System. This system dictates the layout, the type of appliances available (hardware), and the official rulebook and tools (SDK/APIs) that Chefs (Developers) must use. It ensures that any specialty dish (Application) prepared according to these standardized rules will function correctly and consistently, regardless of which physical Kitchen location (Device Manufacturer) it is cooked in, allowing Diners (Users) to place reliable orders."
   },
   {
-    "category": "Search Engine",
-    "term": "Algolia",
-    "explanation": "A hosted search API offering highly configurable and scalable search-as-a-service, focused on speed and relevance for frontend applications.",
-    "analogy": "The premium, centralized digital menu system. It provides immediate, refined suggestions and perfect results even if the diner only types a partial or misspelled query."
+    "category": "Infrastructure Scaling/Resource Optimization",
+    "term": "minmax",
+    "explanation": "In infrastructure management (e.g., cloud auto-scaling or container orchestration), MinMax refers to the mandatory boundary constraints (minimum and maximum limits) set for a resource pool. These parameters define the operational floor and ceiling for the number of active compute instances or threads used to handle variable load, optimizing both resilience and cost efficiency.",
+    "analogy": "MinMax dictates the staffing rules for the restaurant manager. The 'Min' sets the mandatory minimum number of chefs (servers) who must be on duty even during slow hours to maintain service readiness. The 'Max' is the absolute maximum number of chefs allowed on the payroll (due to kitchen space or budget limits), ensuring resource caps are never exceeded, even during the busiest dinner rush."
   },
   {
-    "category": "Search Engine",
-    "term": "Meilisearch",
-    "explanation": "A fast, open-source search engine known for its relevance, typofree search, and easy setup/integration.",
-    "analogy": "The dedicated, highly knowledgeable Expediter. They instantly recognize misspelled orders and know exactly where every single ingredient and recipe card is stored in the entire kitchen structure."
+    "category": "Content Management and Rendering",
+    "term": "preview",
+    "explanation": "A temporary, non-final rendering or execution state of data, code, or design intended for inspection, testing, and approval before permanent application, final deployment, or official publication.",
+    "analogy": "Before a new dish is added to the official Menu (deployment), the Chef plates a small, unsung portion onto a tasting spoon (the preview environment). The Head Chef (tester/manager) reviews this sample to check the seasoning, temperature, and plating (functionality and layout) before the kitchen commits to serving it to the paying Diners."
   },
   {
-    "category": "Search Engine",
-    "term": "OpenSearch",
-    "explanation": "A community-driven, open-source search and analytics suite derived from Elasticsearch, used for log analysis, real-time application monitoring, and full-text search.",
-    "analogy": "The public, highly detailed card catalog system used by all staff. It not only helps locate current recipes but also provides historical data logs on ingredient usage and past diner feedback (analytics)."
+    "category": "Network Infrastructure",
+    "term": "server",
+    "explanation": "A server is a dedicated computational host, hardware or software based, designed to process requests and deliver data, resources, or services (such as databases, web pages, or application functions) to other interconnected computers or programs, known as clients, over a network.",
+    "analogy": "The server is the entire specialized Kitchen operation. It manages all the necessary ingredients (data/resources) and houses the specialized equipment and Chefs (software processes). When a Diner (client) orders a specific dish (makes a request), the Kitchen processes, prepares, and delivers the required meal (service or data) back to the Diner."
   },
   {
-    "category": "Serverless (FaaS)",
-    "term": "AWS Lambda",
-    "explanation": "A serverless compute service that runs code in response to events, automatically managing the underlying compute resources.",
-    "analogy": "The 'Instant Order' Specialized Prep Chef. They only appear exactly when a micro-order (like making a single espresso shot) comes in, execute the task instantly, and vanish, paying only for the exact seconds they worked."
-  },
-  {
-    "category": "Serverless (FaaS)",
-    "term": "Azure Functions",
-    "explanation": "Microsoft Azure's serverless compute service, allowing developers to run small pieces of code (functions) triggered by various events.",
-    "analogy": "The Azure (Microsoft Distributor) equivalent of the Instant Order Chef, typically used for quick tasks like calculating the daily inventory manifest based on sales data."
-  },
-  {
-    "category": "Serverless (FaaS)",
-    "term": "Google Cloud Functions",
-    "explanation": "Google Cloud's event-driven serverless compute platform for building and connecting cloud services.",
-    "analogy": "The Google (Supply Chain Manager) Instant Order Chef, typically triggered by external events, like logging a successful delivery notification into the main cloud database."
-  },
-  {
-    "category": "Serverless (Frontend)",
-    "term": "Vercel Functions",
-    "explanation": "Serverless functions specifically designed to handle dynamic requests and API routing for Vercel-hosted (Next.js/Frontend) applications.",
-    "analogy": "The Frontend Host/Hostess Assistant. They quickly handle dynamic seating requests, reservations, and pre-load personalized greetings for incoming diners right at the front door before routing the official order to the main kitchen."
-  },
-  {
-    "category": "Serverless Compute",
-    "term": "Modal",
-    "explanation": "A serverless platform optimized for running high-performance, containerized ML and data processing workloads on demand.",
-    "analogy": "The specialized, high-capacity banquet hall kitchen that only fires up when a huge private party reservation comes in, shutting down immediately afterward to save energy costs."
-  },
-  {
-    "category": "Serverless/Cloud",
-    "term": "Cold Start",
-    "explanation": "The latency delay incurred when a serverless function is invoked after a period of inactivity, requiring the environment (container, runtime, and code) to be initialized before execution.",
-    "analogy": "When an order comes in for a specialized regional dish that the chef hasn't prepared all evening, they must first spend time finding their unique spices, sharpening their specific knife, and heating up their specialty burner before they can actually begin cooking."
-  },
-  {
-    "category": "Serverless/DevOps",
-    "term": "Warming",
-    "explanation": "The proactive process of sending periodic, low-volume dummy requests to serverless functions to keep them initialized and ready, preventing a cold start delay for subsequent real user traffic.",
-    "analogy": "A sous chef periodically stirring the sauce pot or leaving a small burner on low heat beneath a stock, ensuring the station and necessary ingredients are immediately at the optimal temperature the moment a live order is placed."
-  },
-  {
-    "category": "Software Development/Project Management",
-    "term": "build freeze",
-    "explanation": "A milestone in the software development lifecycle where the introduction of new features, major code refactoring, or non-essential bug fixes is strictly prohibited. This stabilization period is typically initiated just before major quality assurance (QA) testing or a final release candidate build to minimize risk and focus development resources solely on resolving showstopper defects.",
-    "analogy": "The Head Chef announces a 'Kitchen Freeze' shortly before the dinner rush. The Chefs (Developers) are immediately prohibited from trying new experimental recipes (new features) or radically changing existing dishes (major refactoring). They can only focus on fixing critical flaws in the established menu, such as ensuring the existing sauce isn't spoiled or the steak is cooked properly (resolving high-priority bugs), guaranteeing a stable meal (product) is ready for the waiting Diners (Users)."
-  },
-  {
-    "category": "Source Control",
-    "term": "Bitbucket",
-    "explanation": "A Git-based code hosting service, often favored by teams already utilizing the Atlassian ecosystem (Jira, Confluence) for project management.",
-    "analogy": "The Exclusive Corporate Recipe Binder, specifically designed to integrate tightly with the restaurant group's existing scheduling and project management software (Jira/Confluence)."
-  },
-  {
-    "category": "Source Control",
-    "term": "GitHub",
-    "explanation": "A web-based platform for version control using Git, widely used for collaborative open-source and private development.",
-    "analogy": "The Main Global Recipe Library, where chefs store, share, and track changes to every recipe (Frontend code, Backend logic, Sauces). It manages all recipe history."
-  },
-  {
-    "category": "Source Control (AWS)",
-    "term": "CodeCommit",
-    "explanation": "A highly scalable, secure, managed source control service hosted by AWS that supports standard Git functionality.",
-    "analogy": "The AWS (Main Distributor) Secure, On-Site Ingredient Storage Locker. Highly secure, managed directly by the distributor, only accessible within their complex."
-  },
-  {
-    "category": "Streaming/Cloud",
-    "term": "Event Hubs",
-    "explanation": "Azure's highly scalable event ingestion service, optimized to handle millions of events per second from various sources, primarily used for data capture and streaming pipeline integration.",
-    "analogy": "The massive, dedicated, high-throughput loading dock infrastructure built specifically to handle a continuous, overwhelming flow of delivery trucks bringing ingredients to the restaurant without ever causing a bottleneck."
-  },
-  {
-    "category": "Streaming/Data",
-    "term": "Kafka Connect",
-    "explanation": "A framework for reliably streaming data between Apache Kafka topics and other external data systems (databases, file systems, APIs) using pre-built or custom connectors.",
-    "analogy": "Specialized industrial hoses and plumbing designed solely to automatically pull prepared ingredients out of the large, distant walk-in freezer (external system) and deposit them directly onto the high-speed prep line (Kafka Topic), without requiring manual transport."
-  },
-  {
-    "category": "Streaming/Data",
-    "term": "Kafka Streams",
-    "explanation": "A client-side library for building applications that process and analyze data stored in Kafka, allowing for stateful operations like aggregation, windowing, and joins.",
-    "analogy": "The advanced, automated robotic arm placed directly over the continuous ingredient conveyor belt. It constantly analyzes the passing food in real-time—sorting items, combining two specific ingredients (joining), or measuring a temperature average over a 5-second window (windowing)."
-  },
-  {
-    "category": "Streaming/Data",
-    "term": "Kinesis",
-    "explanation": "A platform designed for the real-time collection, processing, and analysis of large, high-volume streaming data (e.g., website clickstreams or sensor data).",
-    "analogy": "The continuous, high-speed conveyor belt that streams raw data (ingredient temperature, weight measurements, spoilage detection) from all kitchen stations into a central quality control center for instant, flowing analysis."
-  },
-  {
-    "category": "Styling & Design",
-    "term": "Tailwind CSS",
-    "explanation": "A utility-first CSS framework that enables rapid styling by applying pre-defined, atomic utility classes directly in the markup.",
-    "analogy": "A large, organized drawer filled with pre-cut garnishes (parsley sprigs, lemon wedges, microgreens) that the plating chef can grab instantly to style any dish consistently and quickly."
-  },
-  {
-    "category": "Task Orchestration",
-    "term": "Inngest",
-    "explanation": "A framework for building reliable, event-driven serverless applications, managing concurrency, retries, and scheduled functions automatically.",
-    "analogy": "The specialized system that ensures if the POS (Point of Sale) terminal fails mid-order, the ingredients are automatically placed back in inventory, and the cooking process is retried reliably as soon as the system is back online."
-  },
-  {
-    "category": "Task Orchestration",
-    "term": "Trigger.dev",
-    "explanation": "A developer framework for creating long-running, reliable background jobs and workflows based on serverless functions and event triggers.",
-    "analogy": "The automated overnight cleaning crew checklist that ensures critical, long-running tasks like oven scrubbing or floor waxing happen reliably at 2 AM, even if the human staff is gone."
-  },
-  {
-    "category": "Tooling and Packaging",
-    "term": "Esbuild",
-    "explanation": "An extremely fast JavaScript bundler and minifier written in Go, focusing on performance gains through highly parallelized native code execution.",
-    "analogy": "The Turbo-Charged Automated Food Processor that can bundle and optimize ingredients at superhuman speed due to its highly optimized, dedicated internal machinery."
-  },
-  {
-    "category": "Tooling and Packaging",
-    "term": "Vite",
-    "explanation": "A next-generation frontend tooling system that leverages native ES modules (ESM) for extremely fast development server startup and lightning-fast rebuilds.",
-    "analogy": "The Instant-Access Refrigerator System that utilizes modern cooling technology (native ESM) to make ingredients available immediately during prep, skipping the usual lengthy warm-up/bootstrapping time."
-  },
-  {
-    "category": "Tooling and Packaging",
-    "term": "Webpack",
-    "explanation": "A static module bundler for modern JavaScript applications, consolidating modules and assets into production-ready, optimized bundles.",
-    "analogy": "The Traditional Prep Chef who diligently measures, combines, and seals all required ingredients (modules) into a single, standardized, compressed package for the final cooking process."
-  },
-  {
-    "category": "Tooling and Packaging",
-    "term": "Yarn",
-    "explanation": "A fast, reliable, and secure dependency management tool that introduced features like lockfiles and standardized installation flows for JavaScript packages.",
-    "analogy": "The Delivery Dispatcher who verifies and organizes incoming ingredient shipments (dependencies) efficiently, ensuring the ingredient list (lockfile) matches the contents exactly before stocking."
-  },
-  {
-    "category": "Tooling and Packaging",
-    "term": "pnpm",
-    "explanation": "A package manager that uses a content-addressable store to save disk space and speed up installations by hard-linking dependencies into projects.",
-    "analogy": "The Organized Pantry Stocker who uses a universal storage vault (content-addressable store) and only creates shortcuts (hard links) in individual recipe boxes, saving immense shelf space and fetching time."
-  },
-  {
-    "category": "UI/Design",
-    "term": "Lucide",
-    "explanation": "A consistent, open-source icon library used to provide visual representation for user interface actions and elements.",
-    "analogy": "The standardized set of decorative garnishes (e.g., a mint leaf for dessert, a parsley sprig for soup) used universally across all restaurant dishes to ensure clean, predictable plating aesthetics."
-  },
-  {
-    "category": "Storage & Infrastructure",
-    "term": "shared file system",
-    "explanation": "A network storage architecture that allows multiple independent computer systems (clients/nodes) to concurrently access, read, write, and modify the same centralized pool of data and metadata, ensuring data consistency and implementing locking mechanisms to prevent simultaneous modification conflicts.",
-    "analogy": "The shared file system is the restaurant's massive, centralized **Walk-in Pantry and Recipe Archive**. All **Chefs (Clients/Nodes)** access this single, consistent source for their ingredients and standardized **Recipe Cards (Files)**. Because multiple chefs are pulling items and consulting recipes concurrently, the system must use special mechanisms (like a sign-out sheet or lock) to ensure that if Chef A takes the last rack of lamb, Chef B knows it is currently unavailable, preventing conflicts in the preparation of their individual **Menu Items (Applications)."
-  },
-  {
-    "category": "Storage Architecture",
-    "term": "persistent file system",
-    "explanation": "A data storage and retrieval methodology implemented via an operating system that guarantees stored files and directory structures remain intact and accessible across system restarts, power failures, or application terminations, utilizing non-volatile storage media such as hard disk drives (HDDs) or solid-state drives (SSDs).",
-    "analogy": "Imagine the Kitchen Manager implements a strict protocol ensuring that every time a Chef finishes creating a new dish (data), the detailed recipe (file) is immediately archived in the permanent, labeled Recipe Vault (non-volatile storage) rather than just scribbled on the temporary prep counter (RAM). This system guarantees that the full Menu (directory structure) and all associated dishes remain perfectly accessible to the Diners, even if the entire restaurant shuts down and reopens the next morning."
-  },
-  {
-    "category": "Process Automation",
-    "term": "workflows",
-    "explanation": "A workflow is a structured, repeatable sequence of interconnected activities, tasks, or computational steps designed to transform data, process information, or achieve a predefined business outcome. Workflows often rely on defined rules, conditional logic, and state transitions to manage the flow of control and data between disparate systems or human input points.",
-    "analogy": "The workflow is the precise, repeatable system followed by the kitchen staff when a Diner places an order. It begins with the Waiter entering the Menu item (trigger), proceeds through a set sequence of tasks—like the Prep Chef preparing ingredients and the Line Chef cooking (processing steps)—and concludes only when the Expediter validates the plate and the Waiter delivers the finished meal, ensuring consistent quality and predictable delivery time for every order."
+    "category": "Operating Systems & Fundamentals",
+    "term": "process",
+    "explanation": "An executing instance of a computer program. A process is an independent entity managed by the operating system, encapsulating the program code, its current activity (stack, registers), and allocated system resources such as memory space, file descriptors, and security attributes. Processes provide the fundamental mechanism for resource allocation and protection within an operating system.",
+    "analogy": "A process is a specific, active **Chef Station** assigned by the Kitchen Manager (the OS). When a Diner places an order (runs a program), a dedicated station is set up. This station contains all the necessary resources—pre-measured ingredients (memory allocation), specific tools (file handles), and the current state of preparation. Although multiple stations might be following the same recipe (the static program code), each station operates independently and keeps its resources strictly isolated from other stations to prevent resource conflicts or cross-contamination."
   }
 ]

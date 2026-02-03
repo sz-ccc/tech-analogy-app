@@ -57,7 +57,7 @@
     "category": "AI & Modern App Concepts (New Kitchen Techniques)",
     "term": "AI Gateway",
     "explanation": "A service that acts as a secure proxy to route, scale, and monitor requests to various AI models and providers.",
-    "analogy": "A master maître d’ who stands at the front desk, takes all AI requests, and directs them to the exact right chef in the kitchen."
+    "analogy": "A master ma\u00eetre d\u2019 who stands at the front desk, takes all AI requests, and directs them to the exact right chef in the kitchen."
   },
   {
     "category": "Edge Compute",
@@ -219,7 +219,7 @@
     "category": "Backend as a Service (BaaS)",
     "term": "Firebase",
     "explanation": "Google's comprehensive platform providing backend services like databases, authentication, hosting, and analytics, primarily used for building mobile and web applications quickly.",
-    "analogy": "The All-Inclusive Corporate Caterer. They handle everything—setting up the tables, supplying the secure ingredients (Auth), managing the inventory (DB), and even hosting the event (Hosting)—all under one major contract."
+    "analogy": "The All-Inclusive Corporate Caterer. They handle everything\u2014setting up the tables, supplying the secure ingredients (Auth), managing the inventory (DB), and even hosting the event (Hosting)\u2014all under one major contract."
   },
   {
     "category": "Infrastructure & Compute (Kitchen and Staff)",
@@ -333,7 +333,7 @@
     "category": "Process Automation",
     "term": "workflows",
     "explanation": "A workflow is a structured, repeatable sequence of interconnected activities, tasks, or computational steps designed to transform data, process information, or achieve a predefined business outcome. Workflows often rely on defined rules, conditional logic, and state transitions to manage the flow of control and data between disparate systems or human input points.",
-    "analogy": "The workflow is the precise, repeatable system followed by the kitchen staff when a Diner places an order. It begins with the Waiter entering the Menu item (trigger), proceeds through a set sequence of tasks—like the Prep Chef preparing ingredients and the Line Chef cooking (processing steps)—and concludes only when the Expediter validates the plate and the Waiter delivers the finished meal, ensuring consistent quality and predictable delivery time for every order."
+    "analogy": "The workflow is the precise, repeatable system followed by the kitchen staff when a Diner places an order. It begins with the Waiter entering the Menu item (trigger), proceeds through a set sequence of tasks\u2014like the Prep Chef preparing ingredients and the Line Chef cooking (processing steps)\u2014and concludes only when the Expediter validates the plate and the Waiter delivers the finished meal, ensuring consistent quality and predictable delivery time for every order."
   },
   {
     "category": "Infrastructure & Compute (Kitchen and Staff)",
@@ -393,7 +393,7 @@
     "category": "Database ORM",
     "term": "Prisma",
     "explanation": "A next-generation ORM (Object-Relational Mapper) that simplifies database access with type-safe schema definitions and automated migrations.",
-    "analogy": "The standardized, clearly labeled shelving system in the pantry that ensures every chef knows exactly where an ingredient (data) is stored and what container (type) it’s in, preventing mistakes."
+    "analogy": "The standardized, clearly labeled shelving system in the pantry that ensures every chef knows exactly where an ingredient (data) is stored and what container (type) it\u2019s in, preventing mistakes."
   },
   {
     "category": "Integration & Access (Menus, Doorbells, Keys)",
@@ -531,7 +531,7 @@
     "category": "Language & Runtime",
     "term": "C++",
     "explanation": "A powerful, compiled, object-oriented language used primarily for systems programming, game engines, and applications requiring maximum performance and direct hardware access.",
-    "analogy": "The Engine Room Specialist. This chef builds and optimizes the high-performance core machinery of the kitchen—the industrial ovens, specialized grinders, and deep freezers—ensuring maximum speed and resource control."
+    "analogy": "The Engine Room Specialist. This chef builds and optimizes the high-performance core machinery of the kitchen\u2014the industrial ovens, specialized grinders, and deep freezers\u2014ensuring maximum speed and resource control."
   },
   {
     "category": "Database: NoSQL Wide-Column",
@@ -561,7 +561,7 @@
     "category": "Language & Runtime",
     "term": "WebAssembly",
     "explanation": "A binary instruction format designed as a portable compilation target for programming languages, enabling client-side performance nearing native speeds in web browsers.",
-    "analogy": "A specialized, high-performance cooking cart brought directly to the diner’s table, allowing the preparation of computationally complex dishes (like molecular gastronomy) instantly and securely inside the dining room (browser)."
+    "analogy": "A specialized, high-performance cooking cart brought directly to the diner\u2019s table, allowing the preparation of computationally complex dishes (like molecular gastronomy) instantly and securely inside the dining room (browser)."
   },
   {
     "category": "Language & Runtime",
@@ -699,13 +699,13 @@
     "category": "Meta-Frameworks",
     "term": "Remix",
     "explanation": "A full-stack web framework based on React Router, emphasizing web standards and leveraging server-side rendering for optimal performance and progressive enhancement.",
-    "analogy": "The Maître D' (Chef + Host) who ensures the React menu presentation is perfectly integrated with the reservation system (server), handling data flow seamlessly via standard waitressing protocols (fetch APIs)."
+    "analogy": "The Ma\u00eetre D' (Chef + Host) who ensures the React menu presentation is perfectly integrated with the reservation system (server), handling data flow seamlessly via standard waitressing protocols (fetch APIs)."
   },
   {
     "category": "Methodology",
     "term": "DevSecOps",
     "explanation": "Integrating security practices into every stage of the development pipeline, shifting security 'left' to ensure early vulnerability detection.",
-    "analogy": "The incorporation of Health Inspectors and Security Guards at every stage of food preparation—checking ingredients on arrival, verifying procedures during cooking, and scanning every package before delivery."
+    "analogy": "The incorporation of Health Inspectors and Security Guards at every stage of food preparation\u2014checking ingredients on arrival, verifying procedures during cooking, and scanning every package before delivery."
   },
   {
     "category": "Methodology",
@@ -723,7 +723,7 @@
     "category": "Methodology",
     "term": "MLOps",
     "explanation": "A set of practices for reliably and efficiently deploying and maintaining machine learning models in production, including monitoring and retraining.",
-    "analogy": "The dedicated process line for generating and serving specialized Recommendation Engines (AI Models)—managing the constant retraining (data ingestion) and ensuring the model consistently suggests the best dessert pairings."
+    "analogy": "The dedicated process line for generating and serving specialized Recommendation Engines (AI Models)\u2014managing the constant retraining (data ingestion) and ensuring the model consistently suggests the best dessert pairings."
   },
   {
     "category": "Methodology",
@@ -915,7 +915,7 @@
     "category": "Networking & Architecture (Where & How Everything Connects)",
     "term": "Proxy (Forward/Reverse)",
     "explanation": "An intermediary server that acts on behalf of a client (Forward) or a server (Reverse) to handle requests, provide security, or cache data.",
-    "analogy": "A maître d’ who speaks to the guests, takes their orders, and relays them to the kitchen—the guests never see the chefs."
+    "analogy": "A ma\u00eetre d\u2019 who speaks to the guests, takes their orders, and relays them to the kitchen\u2014the guests never see the chefs."
   },
   {
     "category": "Networking & Architecture (Where & How Everything Connects)",
@@ -1137,6 +1137,6 @@
     "category": "Operating Systems & Fundamentals",
     "term": "process",
     "explanation": "An executing instance of a computer program. A process is an independent entity managed by the operating system, encapsulating the program code, its current activity (stack, registers), and allocated system resources such as memory space, file descriptors, and security attributes. Processes provide the fundamental mechanism for resource allocation and protection within an operating system.",
-    "analogy": "A process is a specific, active **Chef Station** assigned by the Kitchen Manager (the OS). When a Diner places an order (runs a program), a dedicated station is set up. This station contains all the necessary resources—pre-measured ingredients (memory allocation), specific tools (file handles), and the current state of preparation. Although multiple stations might be following the same recipe (the static program code), each station operates independently and keeps its resources strictly isolated from other stations to prevent resource conflicts or cross-contamination."
+    "analogy": "A process is a specific, active **Chef Station** assigned by the Kitchen Manager (the OS). When a Diner places an order (runs a program), a dedicated station is set up. This station contains all the necessary resources\u2014pre-measured ingredients (memory allocation), specific tools (file handles), and the current state of preparation. Although multiple stations might be following the same recipe (the static program code), each station operates independently and keeps its resources strictly isolated from other stations to prevent resource conflicts or cross-contamination."
   }
 ]

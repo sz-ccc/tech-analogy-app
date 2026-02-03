@@ -134,14 +134,18 @@
             width: 100%;
             max-width: 450px;
             background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-default);
+            border: 1.5px solid var(--border-default);
             border-radius: 12px;
             padding: 5px;
             backdrop-filter: blur(40px);
             transition: all 0.4s var(--ease-out-expo);
+            animation: borderFlow 8s infinite linear;
         }
 
-        .search-box:focus-within { border-color: rgba(255, 255, 255, 0.3); box-shadow: 0 0 20px rgba(255, 255, 255, 0.05); }
+        .search-box:focus-within { 
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.05);
+        }
 
         input { flex: 1; padding: 8px 12px; border: none; font-size: 0.95rem; outline: none; background: transparent; color: white; font-family: 'Inter', sans-serif; }
 
@@ -251,9 +255,7 @@
             </div>
 
             <div id="results">
-                <div class="status-msg">
-                    Enter a term to reveal its hidden recipe...
-                </div>
+                <!-- Redundant box removed as requested -->
             </div>
         </div>
     </div>

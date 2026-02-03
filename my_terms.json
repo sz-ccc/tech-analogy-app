@@ -1138,5 +1138,11 @@
     "term": "process",
     "explanation": "An executing instance of a computer program. A process is an independent entity managed by the operating system, encapsulating the program code, its current activity (stack, registers), and allocated system resources such as memory space, file descriptors, and security attributes. Processes provide the fundamental mechanism for resource allocation and protection within an operating system.",
     "analogy": "A process is a specific, active **Chef Station** assigned by the Kitchen Manager (the OS). When a Diner places an order (runs a program), a dedicated station is set up. This station contains all the necessary resources\u2014pre-measured ingredients (memory allocation), specific tools (file handles), and the current state of preparation. Although multiple stations might be following the same recipe (the static program code), each station operates independently and keeps its resources strictly isolated from other stations to prevent resource conflicts or cross-contamination."
+  },
+  {
+    "category": "Deployment & Hosting",
+    "term": "Render",
+    "explanation": "A unified cloud platform offering hosting for web services, databases, cron jobs, and APIs, simplifying full-stack deployment under a single roof.",
+    "analogy": "The industrial kitchen facility that provides all the equipment, utilities, and space chefs need to run their restaurants."
   }
 ]

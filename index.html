@@ -185,6 +185,32 @@
         .term-name { font-size: 1.8rem; font-family: 'Playfair Display', serif; margin: 0 0 8px 0; color: white; line-height: 1; letter-spacing: -0.04em; }
         .explanation-text { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; max-width: 600px; }
 
+        .term-link {
+            color: var(--neon-green);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            cursor: pointer;
+            border-radius: 2px;
+            padding: 0 1px;
+            transition: color 0.2s var(--ease-out-expo), background 0.2s;
+        }
+        .term-link:hover {
+            color: #fff;
+            background: rgba(56, 176, 0, 0.15);
+        }
+        .term-link:focus {
+            outline: none;
+            background: rgba(56, 176, 0, 0.2);
+        }
+        .term-link--search {
+            text-decoration-style: dotted;
+            color: var(--text-secondary);
+        }
+        .term-link--search:hover {
+            color: var(--neon-green);
+            text-decoration-style: solid;
+        }
+
         .library-title { text-align: center; font-family: 'Geist Mono', monospace; color: var(--text-secondary); font-size: 0.7rem; margin: 0; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; opacity: 0.5; }
 
         .term-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; padding: 15px 20px 40px; }
@@ -260,6 +286,61 @@
 
     function escHtml(s) {
         return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function escapeRegex(s) {
+        return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    const STOPWORDS = new Set(['a', 'an', 'the', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'shall', 'can', 'need', 'dare', 'to', 'of', 'in', 'on', 'for', 'with', 'at', 'by', 'from', 'as', 'into', 'through', 'during', 'before', 'after', 'and', 'but', 'or', 'nor', 'so', 'yet', 'if', 'then', 'than', 'that', 'this', 'it', 'its']);
+
+    function linkifyTerms(text, termsList) {
+        const escaped = text ? escHtml(text) : '';
+        if (!escaped) return '';
+
+        let out = escaped;
+        const placeholders = [];
+
+        if (termsList && termsList.length > 0) {
+            const terms = termsList
+                .map((t) => (typeof t === 'string' ? t : (t && t.term) ? t.term : ''))
+                .filter(Boolean)
+                .sort((a, b) => b.length - a.length);
+            for (const term of terms) {
+                const escapedTerm = escHtml(term);
+                if (!escapedTerm) continue;
+                const re = new RegExp(escapeRegex(escapedTerm), 'gi');
+                out = out.replace(re, (match) => {
+                    const id = placeholders.length;
+                    placeholders.push({ display: match, term: term });
+                    return '\uFFFC' + id + '\uFFFC';
+                });
+            }
+            out = out.replace(/\uFFFC(\d+)\uFFFC/g, (_, id) => {
+                const p = placeholders[parseInt(id, 10)];
+                if (!p) return '';
+                return '<span class="term-link" data-term="' + escHtml(p.term) + '" role="button" tabindex="0">' + p.display + '</span>';
+            });
+        }
+
+        const spanRegex = /<span class="term-link" [^>]*>[\s\S]*?<\/span>/gi;
+        const parts = out.split(spanRegex);
+        const spans = out.match(spanRegex) || [];
+        const rebuilt = [];
+        for (let i = 0; i < parts.length; i++) {
+            rebuilt.push(wrapSearchableWords(parts[i]));
+            if (i < spans.length) rebuilt.push(spans[i]);
+        }
+        return rebuilt.join('');
+    }
+
+    function wrapSearchableWords(segment) {
+        if (!segment) return segment;
+        return segment.replace(/\b(\w+)\b/g, (match) => {
+            if (STOPWORDS.has(match.toLowerCase())) return match;
+            if (match.length < 2) return match;
+            return '<span class="term-link term-link--search" data-term="' + escHtml(match) + '" role="button" tabindex="0">' + match + '</span>';
+        });
     }
 
     async function updatePantry() {
@@ -338,10 +419,10 @@
                 </span>
                 <div id="resCategory" style="color: var(--text-secondary); font-size: 0.75rem; font-family: 'Geist Mono', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; opacity: 0;">${escHtml(data.category)}</div>
                 <h2 id="resName" class="term-name" style="opacity: 0;">${escHtml(data.term)}</h2>
-                <p id="resExp" class="explanation-text" style="opacity: 0;">${escHtml(data.explanation)}</p>
+                <p id="resExp" class="explanation-text" style="opacity: 0;">${linkifyTerms(data.explanation, masterList)}</p>
                 <div id="resAnalogy" class="analogy-container" style="opacity: 0;">
                     <div class="analogy-label">Kitchen Wisdom</div>
-                    <div class="analogy-text">“${data.analogy}”</div>
+                    <div class="analogy-text">“${linkifyTerms(data.analogy, masterList)}"</div>
                 </div>
                 <div class="feedback-section" style="opacity: 0;" id="resFeedback">
                     <button type="button" class="alt-meaning-btn">🔄 Not what you meant? Try a different recipe</button>
@@ -353,6 +434,23 @@
         if (altBtn) altBtn.addEventListener('click', () => handleSearch(data.term, true));
 
         const card = document.getElementById('resultCard');
+        card.addEventListener('click', (e) => {
+            const link = e.target.closest('.term-link');
+            if (link) {
+                e.preventDefault();
+                const term = link.getAttribute('data-term');
+                if (term) handleSearch(term);
+            }
+        });
+        card.addEventListener('keydown', (e) => {
+            if (e.key !== 'Enter' && e.key !== ' ') return;
+            const link = e.target.closest('.term-link');
+            if (link) {
+                e.preventDefault();
+                const term = link.getAttribute('data-term');
+                if (term) handleSearch(term);
+            }
+        });
         setTimeout(() => { 
             card.style.transition = "all 0.8s var(--ease-out-expo), border-color 1.5s ease";
             card.style.opacity = "1";

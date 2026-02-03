@@ -61,7 +61,6 @@
             overflow-x: hidden;
         }
 
-        /* The fix: Use a standard flow for all devices. */
         .page-wrapper {
             display: flex;
             flex-direction: column;
@@ -70,7 +69,6 @@
             min-height: 100vh;
         }
 
-        /* Top section will grow based on content and never overlap the next div */
         .top-section {
             width: 100%;
             padding: 40px 20px 30px 20px;
@@ -83,20 +81,18 @@
             flex-shrink: 0;
         }
 
-        /* Sticky header for the library stays below the top section */
         .library-header-static {
             background-color: var(--bg);
             padding: 25px 20px 10px 20px;
             z-index: 90;
             border-bottom: 1px solid rgba(255, 255, 255, 0.03);
             position: sticky;
-            top: 0; /* Stays at top of screen after scrolling past top-section */
+            top: 0;
         }
 
-        /* The library viewport: we give it a generous fixed height so the animation works */
         .scroll-area {
             width: 100%;
-            height: 450px; /* Consistent height for the floating wall */
+            height: 450px;
             background-color: rgba(0, 0, 0, 0.2);
             overflow: hidden;
             position: relative;
@@ -104,7 +100,18 @@
             margin-bottom: 50px;
         }
 
-        /* Responsive refinements */
+        @media (min-width: 1200px) {
+            body { height: 100vh; overflow: hidden; }
+            .top-section { 
+                height: 35vh; 
+                min-height: 280px; 
+                transition: height 0.8s var(--ease-out-expo);
+            }
+            body.has-result .top-section {
+                height: 60vh;
+            }
+        }
+
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
             .top-section { padding: 30px 15px; }
@@ -373,11 +380,6 @@
                 }
             }, 400 + (index * 150));
         });
-        
-        // Final sanity check: scroll to the result if it's off-screen
-        setTimeout(() => {
-            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 500);
     }
 
     document.getElementById('searchInput').onkeyup = (e) => { if (e.key === 'Enter') handleSearch(); };

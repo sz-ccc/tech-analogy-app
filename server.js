@@ -62,26 +62,29 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
 
 app.post('/api/search', async (req, res) => {
-    const { query } = req.body;
+    const { query, forceNew } = req.body;
     const termLower = query.toLowerCase().trim();
     
     let terms = await getTerms();
     
-    // 1. Check local database
-    // Prioritize exact match ONLY. Partial matches often block new term generation.
-    let found = terms.find(t => t.term.toLowerCase() === termLower);
-    
-    if (found) {
-        return res.json({ source: 'database', ...found });
+    // 1. Check local database (unless forceNew is true)
+    if (!forceNew) {
+        let found = terms.find(t => t.term.toLowerCase() === termLower);
+        if (found) {
+            return res.json({ source: 'database', ...found });
+        }
     }
 
-    // 2. Not found, ask Gemini
+    // 2. Not found or forceNew, ask Gemini
     if (!process.env.GEMINI_API_KEY) {
         return res.status(500).json({ error: 'GEMINI_API_KEY not configured on server.' });
     }
 
     try {
         const prompt = `You are a technical expert. Define the term "${query}". 
+        ${forceNew ? `IMPORTANT: The user already saw one definition and wants a DIFFERENT technical context or meaning for "${query}". 
+        For example, if it's a technical algorithm, they might want to know about a company or tool with the same name.` : ''}
+        
         IMPORTANT: If this is NOT a technical or professional software/infrastructure/IT term, respond with ONLY the word "REJECTED".
         A technical term usually involves programming languages, software architectures, infrastructure tools, algorithms, or computer science concepts.
         

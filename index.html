@@ -179,6 +179,37 @@
         .analogy-text { font-style: italic; color: #fff; font-size: 0.95rem; line-height: 1.5; opacity: 0.95; }
         .analogy-text::before { content: '🍱 '; font-style: normal; }
 
+        .feedback-section {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-default);
+            display: flex;
+            justify-content: center;
+        }
+
+        .alt-meaning-btn {
+            background: transparent;
+            border: 1px solid var(--border-default);
+            color: var(--text-secondary);
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.65rem;
+            padding: 6px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-out-expo);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .alt-meaning-btn:hover {
+            border-color: var(--neon-pink);
+            color: var(--neon-pink);
+            background: rgba(236, 72, 153, 0.05);
+        }
+
         .source-badge { font-size: 0.55rem; font-family: 'Geist Mono', monospace; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: 12px; display: inline-block; border: 1px solid var(--border-default); background: rgba(255, 255, 255, 0.02); color: var(--text-secondary); }
 
         .term-name { font-size: 1.8rem; font-family: 'Playfair Display', serif; margin: 0 0 8px 0; color: white; line-height: 1; letter-spacing: -0.04em; }
@@ -308,14 +339,15 @@
         handleSearch(randomTerm);
     }
 
-    async function handleSearch(overrideQuery = null) {
+    async function handleSearch(overrideQuery = null, forceNew = false) {
         const query = (overrideQuery || document.getElementById('searchInput').value).trim();
         if (!query) return;
 
         const resultsDiv = document.getElementById('results');
         const directMatch = masterList.find(t => t.term.toLowerCase() === query.toLowerCase());
         
-        if (directMatch) {
+        // Only use directMatch if we aren't forcing a new AI search
+        if (directMatch && !forceNew) {
             displayResult(directMatch, 'database');
             return;
         }
@@ -326,7 +358,7 @@
             const response = await fetch('/api/search', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query })
+                body: JSON.stringify({ query, forceNew })
             });
             const data = await response.json();
             
@@ -361,6 +393,11 @@
                     <div class="analogy-label">Kitchen Wisdom</div>
                     <div class="analogy-text">“${data.analogy}”</div>
                 </div>
+                <div class="feedback-section" style="opacity: 0; transition: opacity 1s ease-in 1.2s;" id="resFeedback">
+                    <button class="alt-meaning-btn" onclick="handleSearch('${data.term}', true)">
+                        <span>🔄 Not what you meant? Try a different recipe</span>
+                    </button>
+                </div>
             </div>
         `;
 
@@ -371,7 +408,7 @@
             card.style.transform = "translateY(0)";
         }, 50);
 
-        const elements = ['resCategory', 'resName', 'resExp', 'resAnalogy'];
+        const elements = ['resCategory', 'resName', 'resExp', 'resAnalogy', 'resFeedback'];
         elements.forEach((id, index) => {
             setTimeout(() => {
                 const el = document.getElementById(id);

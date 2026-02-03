@@ -1,6 +1,7 @@
 services:
   - type: web
     name: tech-analogy-kitchen
+    plan: free
     env: node
     buildCommand: npm install
     startCommand: node server.js

@@ -14,13 +14,13 @@
             --border-default: rgba(255, 255, 255, 0.08);
             --text-primary: #ffffff;
             --text-secondary: #a1a1aa;
-            
+
             --neon-green: #38b000;
             --neon-purple: #9d4edd;
             --neon-pink: #ff006e;
             --neon-orange: #ff9f1c;
             --neon-blue: #00d2ff;
-            
+
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -139,7 +139,7 @@
             animation: borderFlow 8s infinite linear;
         }
 
-        .search-box:focus-within { 
+        .search-box:focus-within {
             box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
             background: rgba(255, 255, 255, 0.05);
         }
@@ -377,7 +377,7 @@
 
         const resultsDiv = document.getElementById('results');
         const directMatch = masterList.find(t => t.term.toLowerCase() === query.toLowerCase());
-        
+
         if (directMatch && !forceNew) {
             displayResult(directMatch, 'database');
             return;
@@ -392,15 +392,15 @@
                 body: JSON.stringify({ query, forceNew })
             });
             const data = await response.json();
-            
+
             if (response.status === 400) {
                 resultsDiv.innerHTML = `<div class="status-msg">🔮 ${data.error}</div>`;
                 return;
             }
-            
+
             if (data.error) throw new Error(data.error);
+            await updatePantry();
             displayResult(data, data.source);
-            updatePantry();
         } catch (error) {
             resultsDiv.innerHTML = `<div class="status-msg">📡 Sensei says: ${error.message}</div>`;
         }
@@ -409,7 +409,7 @@
     function displayResult(data, source) {
         const resultsDiv = document.getElementById('results');
         const isAI = source !== 'database';
-        
+
         document.body.classList.add('has-result');
 
         resultsDiv.innerHTML = `
@@ -422,7 +422,7 @@
                 <p id="resExp" class="explanation-text" style="opacity: 0;">${linkifyTerms(data.explanation, masterList)}</p>
                 <div id="resAnalogy" class="analogy-container" style="opacity: 0;">
                     <div class="analogy-label">Kitchen Wisdom</div>
-                    <div class="analogy-text">“${linkifyTerms(data.analogy, masterList)}"</div>
+                    <div class="analogy-text">"${linkifyTerms(data.analogy, masterList)}"</div>
                 </div>
                 <div class="feedback-section" style="opacity: 0;" id="resFeedback">
                     <button type="button" class="alt-meaning-btn">🔄 Not what you meant? Try a different recipe</button>
@@ -451,7 +451,7 @@
                 if (term) handleSearch(term);
             }
         });
-        setTimeout(() => { 
+        setTimeout(() => {
             card.style.transition = "all 0.8s var(--ease-out-expo), border-color 1.5s ease";
             card.style.opacity = "1";
             card.style.transform = "translateY(0)";
@@ -470,8 +470,15 @@
         });
     }
 
-    document.getElementById('searchInput').onkeyup = (e) => { if (e.key === 'Enter') handleSearch(); };
-    updatePantry();
+    // Initialize on page load
+    window.addEventListener('DOMContentLoaded', async () => {
+        await updatePantry();
+        console.log('Pantry loaded:', masterList.length, 'terms');
+
+        document.getElementById('searchInput').onkeyup = (e) => {
+            if (e.key === 'Enter') handleSearch();
+        };
+    });
 </script>
 
 </body>
